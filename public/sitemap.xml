@@ -1,73 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://aliajvand.github.io/</loc>
+    <loc>https://aliajvand.github.io/portfolio/</loc>
     <lastmod>2026-08-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://aliajvand.github.io/about</loc>
+    <loc>https://aliajvand.github.io/portfolio/about</loc>
     <lastmod>2026-08-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://aliajvand.github.io/projects</loc>
+    <loc>https://aliajvand.github.io/portfolio/projects</loc>
     <lastmod>2026-08-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://aliajvand.github.io/projects/all</loc>
+    <loc>https://aliajvand.github.io/portfolio/projects/all</loc>
     <lastmod>2026-08-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://aliajvand.github.io/experience</loc>
+    <loc>https://aliajvand.github.io/portfolio/experience</loc>
     <lastmod>2026-08-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://aliajvand.github.io/skills</loc>
+    <loc>https://aliajvand.github.io/portfolio/skills</loc>
     <lastmod>2026-08-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://aliajvand.github.io/services</loc>
+    <loc>https://aliajvand.github.io/portfolio/services</loc>
     <lastmod>2026-08-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://aliajvand.github.io/contact</loc>
+    <loc>https://aliajvand.github.io/portfolio/contact</loc>
     <lastmod>2026-08-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://aliajvand.github.io/projects/credit-risk-decision-engine</loc>
+    <loc>https://aliajvand.github.io/portfolio/projects/credit-risk-decision-engine</loc>
     <lastmod>2026-08-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://aliajvand.github.io/projects/demand-sales-forecasting</loc>
+    <loc>https://aliajvand.github.io/portfolio/projects/demand-sales-forecasting</loc>
     <lastmod>2026-08-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://aliajvand.github.io/projects/ev-automotive-analytics</loc>
+    <loc>https://aliajvand.github.io/portfolio/projects/ev-automotive-analytics</loc>
     <lastmod>2026-08-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://aliajvand.github.io/projects/olist-delivery-analytics</loc>
+    <loc>https://aliajvand.github.io/portfolio/projects/olist-delivery-analytics</loc>
     <lastmod>2026-08-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

@@ -9,7 +9,11 @@ const root = resolve(here, '..')
 const siteConfigUrl = pathToFileURL(resolve(root, 'src/content/site.config.js')).href
 const { site } = await import(siteConfigUrl)
 
-const base = site.url.replace(/\/$/, '')
+// This script runs in plain Node (no Vite import.meta.env), so it derives the base
+// path itself instead of relying on site.config.js. The site is deployed under a
+// subfolder, so the URL host and path are resolved here.
+const basePath = (process.env.BASE_PATH || process.env.VITE_BASE_PATH || '/portfolio/').replace(/\/$/, '')
+const base = `https://aliajvand.github.io${basePath}`
 const staticRoutes = ['/', '/about', '/projects', '/projects/all', '/experience', '/skills', '/services', '/contact']
 const files = await readdir(resolve(root, 'src/content/projects'))
 const projectRoutes = files.filter((f) => f.endsWith('.md')).map((f) => `/projects/${f.replace(/\.md$/, '')}`)
