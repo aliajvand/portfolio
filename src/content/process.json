@@ -1,0 +1,27 @@
+{
+  "title": "How I work",
+  "intro": "Three stages, in this order. Skipping the first one is why most dashboards and models get abandoned.",
+  "steps": [
+    {
+      "id": "clean-data",
+      "label": "Clean Data",
+      "icon": "database",
+      "summary": "Nothing downstream is worth anything until the input is trustworthy.",
+      "items": ["Data Cleaning", "Feature Engineering", "EDA"]
+    },
+    {
+      "id": "dashboard",
+      "label": "Dashboard",
+      "icon": "chart",
+      "summary": "Make the current state visible before predicting the future one.",
+      "items": ["KPI Design", "Power BI (DAX / Power Query)", "Interactive Reporting"]
+    },
+    {
+      "id": "model",
+      "label": "Model",
+      "icon": "brain",
+      "summary": "Only once the metric is agreed does a model have a target worth hitting.",
+      "items": ["Model Training & Comparison", "Evaluation", "Explainability (SHAP)"]
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "skills": [
+    {
+      "group": "Data Analysis & Engineering",
+      "items": [
+        { "name": "Python", "percent": 85, "icon": "python" },
+        { "name": "SQL / T-SQL", "percent": 65, "icon": "database" },
+        { "name": "Pandas", "percent": 80, "icon": "table" },
+        { "name": "DuckDB / Parquet", "percent": 70, "icon": "file" }
+      ]
+    },
+    {
+      "group": "Machine Learning",
+      "items": [
+        { "name": "Scikit-learn", "percent": 80, "icon": "brain" },
+        { "name": "XGBoost / LightGBM", "percent": 75, "icon": "trending" },
+        { "name": "Gradient Boosting", "percent": 75, "icon": "trending" },
+        { "name": "Probability Calibration", "percent": 70, "icon": "sliders" },
+        { "name": "Walk-Forward Validation", "percent": 70, "icon": "trending" },
+        { "name": "SHAP", "percent": 70, "icon": "sparkles" }
+      ]
+    },
+    {
+      "group": "BI & Visualization",
+      "items": [
+        { "name": "Power BI", "percent": 85, "icon": "chart" },
+        { "name": "DAX / Power Query", "percent": 80, "icon": "sliders" },
+        { "name": "Tableau", "percent": 70, "icon": "chart" },
+        { "name": "Matplotlib / Seaborn", "percent": 75, "icon": "chart" },
+        { "name": "Folium", "percent": 65, "icon": "map" }
+      ]
+    },
+    {
+      "group": "Engineering & MLOps",
+      "items": [
+        { "name": "FastAPI / Flask", "percent": 70, "icon": "api" },
+        { "name": "Docker", "percent": 60, "icon": "container" },
+        { "name": "Git / GitHub Actions", "percent": 80, "icon": "github" },
+        { "name": "pytest", "percent": 60, "icon": "file" }
+      ]
+    }
+  ]
+}

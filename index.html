@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Static SEO fallback. The app overrides these per route from src/content/site.config.js.
+       If you change your name/tagline in site.config.js, mirror it here once. -->
+  <title>Ali Ajvand | Data Scientist, BI Developer & ML Engineer</title>
+  <meta name="description" content="Ali Ajvand builds predictive models, Power BI dashboards and analytics automation. Freelance data scientist available for international remote projects." />
+  <link rel="canonical" href="https://aliajvand.github.io/portfolio/" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Ali Ajvand | Data Scientist, BI Developer & ML Engineer" />
+  <meta property="og:description" content="Predictive models, Power BI dashboards and analytics automation." />
+  <meta property="og:image" content="https://aliajvand.github.io/portfolio/og-image.png" />
+  <meta property="og:url" content="https://aliajvand.github.io/portfolio/" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Fonts must match src/content/design-tokens.js (font.display / font.body / font.mono) -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <script>
+    // GitHub Pages SPA support: decodes the redirect written by public/404.html
+    (function () {
+      var q = window.location.search;
+      if (q && q[1] === '/') {
+        var decoded = q.slice(1).split('&').map(function (s) { return s.replace(/~and~/g, '&'); }).join('?');
+        var pathname = window.location.pathname.replace(/\/$/, '');
+        var basePath = pathname === '' ? '/' : pathname.match(/^\/[^/]+/)?.[0] || '/';
+        var targetPath = pathname === basePath ? basePath + decoded : pathname + decoded;
+        window.history.replaceState(null, null, targetPath + window.location.hash);
+      }
+    })();
+  </script>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="module" src="./src/main.jsx"></script>
+</body>
+</html>

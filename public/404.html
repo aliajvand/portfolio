@@ -1,0 +1,10 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Redirecting…</title><script>
+// Sends deep links back to index.html so React Router can handle them on GitHub Pages.
+var l = window.location;
+var pathname = l.pathname.replace(/\/+$/, '');
+var basePath = pathname === '' ? '/' : pathname.match(/^\/[^/]+/)?.[0] || '/';
+var routePath = pathname.replace(new RegExp('^' + basePath.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')), '');
+var redirectPath = basePath + '/?/' + routePath.replace(/^\//, '').replace(/&/g, '~and~') + (l.search ? '&' + l.search.slice(1) : '') + l.hash;
+l.replace(l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') + redirectPath);
+</script></head><body></body></html>
