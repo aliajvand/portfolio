@@ -5,7 +5,7 @@ categories: [Machine Learning, Automation]
 repo: olist-delivery-analytics
 tech: [Python, Scikit-learn, Pandas, Parquet, Geospatial Features, Isotonic Calibration, pytest]
 summary: An end-to-end logistics pipeline over ~99,000 Brazilian e-commerce orders that predicts late delivery, estimates freight cost, and sets promise dates using only purchase-time information, backed by a 39-feature leakage audit and 34 automated tests.
-thumbnail: null
+thumbnail: /images/projects/olist_delivery_analytics_banner.png
 featured: true
 order: 3
 powerBiEmbedUrl:

@@ -2,10 +2,10 @@
 title: Intelligent Medical Assistant
 slugOverride:
 categories: [Machine Learning, NLP]
-repo: TODO-REPO-NAME
+repo: medical
 tech: [Python, FastAPI, FAISS, Sentence-Transformers, PyTorch, OCR, Docker]
 summary: A retrieval-augmented medical assistant that reads medical documents with OCR, embeds them with Sentence-Transformers, and serves semantic search through a FAISS-backed FastAPI service packaged with Docker, planned as a six-phase product.
-thumbnail: null
+thumbnail: /images/projects/medical_banner.png
 featured: true
 order: 1
 powerBiEmbedUrl:

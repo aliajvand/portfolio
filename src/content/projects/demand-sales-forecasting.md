@@ -5,7 +5,7 @@ categories: [Machine Learning, Data Analysis]
 repo: demand_sales_forecasting
 tech: [Python, Pandas, Scikit-learn, Gradient Boosting, Walk-Forward Validation, Power BI]
 summary: A 42-day retail demand forecasting pipeline across 1,115 stores that cut error from a 34.06% same-weekday heuristic to 9.36% WMAPE, validated on non-overlapping walk-forward folds.
-thumbnail: null
+thumbnail: /images/projects/demand_sales_forecasting_banner.png
 featured: true
 order: 1
 powerBiEmbedUrl:

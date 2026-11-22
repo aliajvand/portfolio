@@ -15,10 +15,17 @@ import Contact from './pages/Contact.jsx'
 import NotFound from './pages/NotFound.jsx'
 
 function ScrollToTop() {
-  const { pathname } = useLocation()
+  const { pathname, hash } = useLocation()
   useEffect(() => {
+    if (hash) {
+      const el = document.querySelector(hash)
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' })
+        return
+      }
+    }
     window.scrollTo({ top: 0, behavior: 'instant' })
-  }, [pathname])
+  }, [pathname, hash])
   return null
 }
 

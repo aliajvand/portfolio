@@ -5,7 +5,7 @@ categories: [Machine Learning, Business Intelligence]
 repo: credit_risk_decision_engine
 tech: [Python, Logistic Regression, Gradient Boosting, Isotonic Calibration, SHAP, Power BI]
 summary: A calibrated probability-of-default scorecard and approval policy for 30,000 credit-card clients, tuned to a real cost trade-off and audited to keep protected attributes out of the decision.
-thumbnail: null
+thumbnail: /images/projects/credit_risk_decision_engine_banner.png
 featured: true
 order: 2
 powerBiEmbedUrl:

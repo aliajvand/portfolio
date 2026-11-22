@@ -5,7 +5,7 @@ categories: [Business Intelligence, Machine Learning, Dashboard]
 repo: ev_automotive_analytics
 tech: [Power BI, DAX, Python, Linear Regression, Gradient Boosting, SHAP, K-Means]
 summary: A Power BI star schema over 289,555 EV registrations plus a used-car pricing model on 15,409 listings, where an explainable linear model beat gradient boosting once a leakage audit was applied.
-thumbnail: null
+thumbnail: /images/projects/ev_automotive_analytics_banner.png
 featured: true
 order: 4
 powerBiEmbedUrl:
