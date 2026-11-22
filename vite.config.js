@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 
 const repoName = process.env.GITHUB_REPOSITORY?.split('/')[1] || 'portfolio'
-const basePath = process.env.VITE_BASE_PATH || (process.env.GITHUB_ACTIONS ? `/${repoName}/` : '/portfolio/')
+const basePath = process.env.VITE_BASE_PATH || (process.env.GITHUB_ACTIONS ? `/${repoName}/` : '/')
 
 export default defineConfig({
   base: basePath,
