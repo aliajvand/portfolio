@@ -1,30 +1,21 @@
 ---
-company: BehinBazar
-role: Data Analyst (Project-Based)
-period: Apr 2024 – Nov 2024
-location: Tehran, Iran
-logo: 
+company: بهین بازار نگر اکسون (اکانت JTI)
+role: تحلیلگر ارشد داده و مهندس آنالیتیکس (پروژه‌ای)
+period: فروردین ۱۴۰۳ – آبان ۱۴۰۳
+location: تهران، ایران
+logo: /images/logos/behin_bazar_negar_axon.svg
 monogram: BB
 order: 1
-tech: [Python, Pandas, Power BI, Folium, Google Sheets]
+tech: [Python, Pandas, Power BI, Advanced DAX, Folium, Google Sheets API]
 ---
 
-## Overview
+## مأموریت و حوزه فعالیت
 
-FMCG field-sales analytics for the JTI account. Built end-to-end ETL pipelines, Power BI dashboards, and automated reporting workflows.
+تحلیل داده‌های فروش میدانی و توزیع کالاهای تندمصرف (FMCG) برای حساب رسمی شرکت بین‌المللی جی‌تی‌آی (JTI)؛ طراحی خطوط لوله مکانیزه داده، داشبوردهای مدیریتی Power BI و اتوماسیون کامل فرایندهای نظارت بر تیم‌های ممیزی فروش.
 
-## Responsibilities & Achievements
+## مسئولیت‌ها و دستاوردهای کلیدی
 
-- **ETL Pipelines:** Engineered automated workflows in Python (pandas) to ingest, validate, and clean retail field data — raising data quality on the source feed used by every downstream report.
-
-- **Power BI Dashboards:** Designed and deployed interactive dashboards with DAX measures over a modeled dataset, tracking sales performance and field-team productivity — giving managers a same-day operational KPI view.
-
-- **Geospatial Tooling:** Built Folium tools for store-coverage analysis and route planning — converting a manual scheduling task into a repeatable, data-driven workflow.
-
-- **Reporting Automation:** Automated weekly reporting with Python and Google Sheets API — cutting manual reporting effort by **40%** and eliminating copy-paste errors.
-
-## Business Impact
-
-- Consolidated scattered progress updates into a single actionable report
-- Enabled same-day visibility into coverage and target attainment
-- Reduced manual effort so field teams could focus on sales, not reporting
+- **اتوماسیون ۱۰۰٪ گزارش‌های روزانه عملیاتی:** طراحی و استقرار پایپ‌لاین یکپارچه داده با پایتون و Google Sheets API که ورود، اعتبارسنجی و پالایش داده‌های میدانی کشور را به صفر رساند و نیاز به اکسل‌کاری دستی را کاملاً حذف کرد.
+- **داشبوردهای هوش تجاری (Power BI):** مدل‌سازی ستاره‌ای داده‌ها و تدوین شاخص‌های محاسباتی با فرمول‌های پیچیده DAX برای پایش لحظه‌ای عملکرد فروشگاه‌ها، تارگت شعب و بهره‌وری تیم‌های سرکشی.
+- **ابزارهای هوشمند ژئواسپاشیال (Geospatial):** طراحی موتور تحلیل پوشش فروشگاهی و بهینه‌سازی مسیر ویزیتورها با کتابخانه Folium؛ تبدیل برنامه‌ریزی سنتی مأموریت‌ها به الگوریتم‌های خوشه‌بندی تکرارپذیر.
+- **افزایش بهره‌وری و کاهش ۴۰٪ زمان آماده‌سازی گزارش:** حذف مغایرت‌های نسخه‌ای و ارائه دید بلادرنگ (Same-day Visibility) به مدیران ارشد برای تصمیم‌گیری به‌موقع در توزیع و لجستیک.

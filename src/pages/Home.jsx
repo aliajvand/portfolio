@@ -1,5 +1,6 @@
 import { useSeo } from '../lib/seo.js'
 import { projects, site } from '../lib/content.js'
+import { useLocale } from '../lib/locale.jsx'
 import Page from '../components/Page.jsx'
 import Hero from '../components/Hero.jsx'
 import SectionHead from '../components/SectionHead.jsx'
@@ -12,6 +13,8 @@ import Button from '../components/Button.jsx'
 import Reveal from '../components/Reveal.jsx'
 
 export default function Home() {
+  const { t, lang } = useLocale()
+
   useSeo({
     path: '/',
     title: `${site.name} — Senior Data Scientist & ML Architect`,
@@ -23,51 +26,51 @@ export default function Home() {
 
   const impactMetrics = [
     {
-      value: '۸',
-      label: 'سیستم پروداکشن',
-      detail: 'ممیزی‌شده، تست خودکار و فعال در گیت‌هاب',
+      value: t.metrics.m1_val,
+      label: t.metrics.m1_lbl,
+      detail: t.metrics.m1_sub,
       icon: 'folderGit',
     },
     {
-      value: '۸۴۴K+',
-      label: 'روز-فروشگاه پیش‌بینی',
-      detail: '۷۲.۵٪ کاهش خطا در ۱,۱۱۵ شعبه',
+      value: t.metrics.m2_val,
+      label: t.metrics.m2_lbl,
+      detail: t.metrics.m2_sub,
       icon: 'trending',
     },
     {
-      value: '۲۸۹K+',
-      label: 'ناوگان خودرو برقی',
-      detail: 'استاراسکیما و مدل‌سازی پذیرش بازار',
+      value: t.metrics.m3_val,
+      label: t.metrics.m3_lbl,
+      detail: t.metrics.m3_sub,
       icon: 'database',
     },
     {
-      value: 'رتبه ۲ از ۱۳',
-      label: 'هکاتون کشوری پل ۴',
-      detail: '۹,۶۳۰ پیش‌بینی تقاضا در ۳۲۱ شهر',
+      value: t.metrics.m4_val,
+      label: t.metrics.m4_lbl,
+      detail: t.metrics.m4_sub,
       icon: 'star',
     },
     {
-      value: '۶۹.۸۵٪',
-      label: 'دقت جهتی بورس تهران',
-      detail: 'ترکیب GNN + LSTM در ۵ فولد پیوسته',
+      value: t.metrics.m5_val,
+      label: t.metrics.m5_lbl,
+      detail: t.metrics.m5_sub,
       icon: 'chart',
     },
     {
-      value: '۲.۵۲x',
-      label: 'ضریب لیفت حفظ مشتری',
-      detail: '۱۷۶.۷ هزار دلار ارزش قرارداد حفاظت‌شده',
+      value: t.metrics.m6_val,
+      label: t.metrics.m6_lbl,
+      detail: t.metrics.m6_sub,
       icon: 'target',
     },
     {
-      value: '<۱۵ms',
-      label: 'تأخیر بازیابی برداری',
-      detail: 'جستجوی معنایی FAISS روی اسناد بالینی',
+      value: t.metrics.m7_val,
+      label: t.metrics.m7_lbl,
+      detail: t.metrics.m7_sub,
       icon: 'api',
     },
     {
-      value: '۰٪',
-      label: 'نشت اطلاعات (Leakage)',
-      detail: 'اعتبارسنجی رو به جلو و ممیزی ویژگی‌ها',
+      value: t.metrics.m8_val,
+      label: t.metrics.m8_lbl,
+      detail: t.metrics.m8_sub,
       icon: 'check',
     },
   ]
@@ -118,9 +121,9 @@ export default function Home() {
       <section id="projects" className="scroll-mt-14 pb-28" aria-labelledby="projects-title">
         <SectionHead
           id="projects-title"
-          label="سیستم‌های عملیاتی پروداکشن"
-          title="۸ مخزن ممیزی‌شده یادگیری ماشین و هوش تجاری"
-          lead="پایپ‌لاین‌های بدون نشت، پروتکل‌های اعتبارسنجی واک‌فوروارد، مایکروسرویس‌های FastAPI و شبیه‌سازهای تعاملی Dash روی داده‌های واقعی."
+          label={t.projectsHead.label}
+          title={t.projectsHead.title}
+          lead={t.projectsHead.lead}
         />
         <ProjectsExplorer />
       </section>
@@ -129,9 +132,9 @@ export default function Home() {
       <section id="skills" className="scroll-mt-14 pb-28" aria-labelledby="skills-title">
         <SectionHead
           id="skills-title"
-          label="مهارت‌ها و متدولوژی‌ها"
-          title="ماتریس مهارت‌های فنی و استک مهندسی"
-          lead="از خطوط لوله داده و استاراسکیماهای Kimball تا مدل‌سازی پیشرفته ریسک، سری‌های زمانی و استقرار سرویس‌های ابری."
+          label={t.skillsHead.label}
+          title={t.skillsHead.title}
+          lead={t.skillsHead.lead}
         />
         <SkillsGrid />
       </section>
@@ -140,9 +143,9 @@ export default function Home() {
       <section id="experience" className="scroll-mt-14 pb-28" aria-labelledby="experience-title">
         <SectionHead
           id="experience-title"
-          label="سوابق و افتخارات"
-          title="تجربه حرفه‌ای و مدال‌های مسابقات کشوری"
-          lead="مهندسی داده میدانی در مقیاس ملی و افتخار کسب رتبه دوم هکاتون تقاضای گردشگری."
+          label={t.expHead.label}
+          title={t.expHead.title}
+          lead={t.expHead.lead}
         />
         <ExperienceList />
       </section>
@@ -151,9 +154,9 @@ export default function Home() {
       <section id="resume" className="scroll-mt-14 pb-28" aria-labelledby="resume-title">
         <SectionHead
           id="resume-title"
-          label="مدارک و شایستگی‌ها"
-          title="رزومه بهینه‌شده ATS (صدک ۹۹ — استاندارد ۲ صفحه)"
-          lead="فرمول ضربه گوگل (Google XYZ) با اولویت‌بندی صنایع بانکداری، رمزارز و بازارهای مالی، بیمه و خودرو."
+          label={t.resumeHead.label}
+          title={t.resumeHead.title}
+          lead={t.resumeHead.lead}
         />
         <Reveal className="relative overflow-hidden rounded-3xl border border-white/10 bg-[#0e0e16] p-6 shadow-2xl sm:p-10">
           <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between border-b border-white/10 pb-6">
@@ -238,9 +241,9 @@ export default function Home() {
       <section id="contact" className="scroll-mt-14" aria-labelledby="contact-title">
         <SectionHead
           id="contact-title"
-          label="ارتباط مستقیم"
-          title="همکاری روی پروژه‌های بزرگ داده و یادگیری ماشین"
-          lead="آماده برای همکاری تمام‌وقت در جایگاه‌های ارشد دیتا و پروژه‌های تحلیلی با اثرگذاری اقتصادی بالا."
+          label={t.contactHead.label}
+          title={t.contactHead.title}
+          lead={t.contactHead.lead}
         />
         <Reveal>
           <div className="rounded-3xl border border-white/10 bg-[#0e0e16] p-6 sm:p-10">
@@ -251,12 +254,14 @@ export default function Home() {
               >
                 <div className="flex items-center gap-3 text-accent">
                   <Icon name="mail" size={20} />
-                  <span className="font-mono text-xs uppercase tracking-wider font-semibold">ایمیل مستقیم</span>
+                  <span className="font-mono text-xs uppercase tracking-wider font-semibold">
+                    {t.contactHead.emailLabel}
+                  </span>
                 </div>
                 <p className="mt-3 break-words text-base font-semibold text-white group-hover:text-accent">
                   {site.email}
                 </p>
-                <p className="mt-1 text-xs text-ink-muted">پاسخ‌گویی سریع در کمتر از ۲۴ ساعت</p>
+                <p className="mt-1 text-xs text-ink-muted">{t.contactHead.emailSub}</p>
               </a>
 
               <a
@@ -265,21 +270,25 @@ export default function Home() {
               >
                 <div className="flex items-center gap-3 text-accent">
                   <Icon name="phone" size={20} />
-                  <span className="font-mono text-xs uppercase tracking-wider font-semibold">تلفن و تلگرام</span>
+                  <span className="font-mono text-xs uppercase tracking-wider font-semibold">
+                    {t.contactHead.phoneLabel}
+                  </span>
                 </div>
                 <p className="mt-3 text-base font-semibold text-white group-hover:text-accent">
                   {site.phone}
                 </p>
-                <p className="mt-1 text-xs text-ink-muted">تماس کاری و تلگرام مستقیم</p>
+                <p className="mt-1 text-xs text-ink-muted">{t.contactHead.phoneSub}</p>
               </a>
 
               <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-6">
                 <div className="flex items-center gap-3 text-accent">
                   <Icon name="mapPin" size={20} />
-                  <span className="font-mono text-xs uppercase tracking-wider font-semibold">موقعیت مکانی</span>
+                  <span className="font-mono text-xs uppercase tracking-wider font-semibold">
+                    {t.contactHead.locLabel}
+                  </span>
                 </div>
-                <p className="mt-3 text-base font-semibold text-white">{site.location}</p>
-                <p className="mt-1 text-xs text-ink-muted">تهران (UTC+3:30) • آماده همکاری ریموت و حضوری</p>
+                <p className="mt-3 text-base font-semibold text-white">{t.contactHead.locVal}</p>
+                <p className="mt-1 text-xs text-ink-muted">{t.contactHead.locSub}</p>
               </div>
             </div>
 
@@ -310,7 +319,7 @@ export default function Home() {
               </div>
 
               <p className="text-xs text-ink-faint font-mono">
-                طراحی به سبک Apple Pro • تایپوگرافی دانا • ری‌اکت ۱۸ و Tailwind CSS
+                طراحی به سبک Apple Pro • تایپوگرافی وزیر (Vazir) • ری‌اکت ۱۸ و Tailwind CSS
               </p>
             </div>
           </div>

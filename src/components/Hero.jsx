@@ -3,8 +3,10 @@ import { motion, useReducedMotion } from 'framer-motion'
 import site from '../content/site.config.js'
 import Button from './Button.jsx'
 import Icon from './Icon.jsx'
+import { useLocale } from '../lib/locale.jsx'
 
 export default function Hero() {
+  const { t, lang } = useLocale()
   const reduced = useReducedMotion()
   const [photoLoaded, setPhotoLoaded] = useState(false)
   const github = site.socials.find((s) => s.id === 'github')
@@ -70,7 +72,7 @@ export default function Hero() {
       >
         <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 font-mono text-xs font-semibold tracking-wider text-ink-muted backdrop-blur-md">
           <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
-          <span>Senior Data Scientist & Machine Learning Architect</span>
+          <span>{t.hero.badge}</span>
         </span>
       </motion.div>
 
@@ -79,9 +81,9 @@ export default function Hero() {
         initial={reduced ? false : { opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
-        className="mt-5 text-4xl font-extrabold tracking-tight text-white sm:text-6xl lg:text-7xl"
+        className="mt-5 text-4xl font-extrabold tracking-tight text-white sm:text-6xl lg:text-7xl font-display"
       >
-        {site.name}
+        {lang === 'fa' ? 'علی اجوند' : 'Ali Ajvand'}
       </motion.h1>
 
       {/* Primary Value Statement */}
@@ -91,7 +93,7 @@ export default function Hero() {
         transition={{ duration: 0.7, delay: 0.22, ease: [0.16, 1, 0.3, 1] }}
         className="mx-auto mt-4 max-w-2xl text-xl font-medium tracking-tight text-white/90 sm:text-2xl"
       >
-        مهندسی تصمیم، مدل‌سازی ریسک و هوش تجاری در مقیاس پروداکشن.
+        {t.hero.headline}
       </motion.p>
 
       {/* Subtitle */}
@@ -101,7 +103,7 @@ export default function Hero() {
         transition={{ duration: 0.7, delay: 0.28, ease: [0.16, 1, 0.3, 1] }}
         className="mx-auto mt-4 max-w-[64ch] text-base leading-relaxed text-ink-muted sm:text-lg"
       >
-        طراحی و استقرار سیستم‌های تصمیم‌یار از پایپ‌لاین‌های تراکنشی SQL و استاراسکیما تا سرویس‌های کم‌تأخیر یادگیری ماشین و شبیه‌سازهای مالی؛ متعهد به ارقام واقعی، اعتبارسنجی بدون نشت زمانی و بازدهی اقتصادی ملموس.
+        {t.hero.sub}
       </motion.p>
 
       {/* Action Buttons */}
@@ -112,13 +114,13 @@ export default function Hero() {
         className="mt-8 flex flex-wrap items-center justify-center gap-3.5"
       >
         <Button href="#projects" variant="primary" icon="folderGit">
-          مشاهده ۸ سیستم عملیاتی
+          {t.hero.btnProjects}
         </Button>
         <Button href="#startup" variant="secondary" icon="sparkles">
-          پروژه استارتاپی RCI (به زودی)
+          {t.hero.btnStartup}
         </Button>
         <Button href="#resume" variant="ghost" icon="fileText">
-          رزومه ATS (۲ صفحه)
+          {t.hero.btnResume}
         </Button>
 
         <span aria-hidden="true" className="h-6 w-px self-center bg-white/10 hidden sm:block" />

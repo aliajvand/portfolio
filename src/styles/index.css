@@ -1,46 +1,46 @@
 @import 'tailwindcss';
 
 /* ---------------------------------------------------------------------------
-   DANA PERSIAN FONT INTEGRATION (Vite Asset Hashed)
+   VAZIR (وزیر) PERSIAN FONT INTEGRATION (Vite Asset Hashed)
 --------------------------------------------------------------------------- */
 @font-face {
-  font-family: 'Dana';
-  src: url('../assets/fonts/dana/DanaFaNum-Regular.woff2') format('woff2');
+  font-family: 'Vazir';
+  src: url('../assets/fonts/vazir/Vazir-Thin.woff2') format('woff2');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Vazir';
+  src: url('../assets/fonts/vazir/Vazir-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Vazir';
+  src: url('../assets/fonts/vazir/Vazir-Regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Dana';
-  src: url('../assets/fonts/dana/DanaFaNum-Medium.woff2') format('woff2');
+  font-family: 'Vazir';
+  src: url('../assets/fonts/vazir/Vazir-Medium.woff2') format('woff2');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Dana';
-  src: url('../assets/fonts/dana/DanaFaNum-DemiBold.woff2') format('woff2');
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Dana';
-  src: url('../assets/fonts/dana/DanaFaNum-Bold.woff2') format('woff2');
+  font-family: 'Vazir';
+  src: url('../assets/fonts/vazir/Vazir-Bold.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Dana';
-  src: url('../assets/fonts/dana/DanaFaNum-ExtraBold.woff2') format('woff2');
-  font-weight: 800;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Dana';
-  src: url('../assets/fonts/dana/DanaFaNum-Black.woff2') format('woff2');
+  font-family: 'Vazir';
+  src: url('../assets/fonts/vazir/Vazir-Black.woff2') format('woff2');
   font-weight: 900;
   font-style: normal;
   font-display: swap;
@@ -86,8 +86,8 @@
     background: var(--color-bg);
     color: var(--color-ink);
     font-family: var(--font-body);
-    font-size: 16px;
-    line-height: 1.6;
+    font-size: 15.5px;
+    line-height: 1.65;
     letter-spacing: -0.01em;
     -webkit-font-smoothing: antialiased;
     font-optical-sizing: auto;
@@ -95,8 +95,8 @@
   h1, h2, h3, h4 {
     font-family: var(--font-display);
     color: var(--color-ink);
-    line-height: 1.15;
-    letter-spacing: -0.025em;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
     text-wrap: balance;
     margin: 0;
   }
@@ -110,9 +110,9 @@
     outline-offset: 3px;
     border-radius: 6px;
   }
-  ::-webkit-scrollbar { width: 8px; height: 8px; }
+  ::-webkit-scrollbar { width: 7px; height: 7px; }
   ::-webkit-scrollbar-track { background: var(--color-bg); }
-  ::-webkit-scrollbar-thumb { background: var(--color-raised); border-radius: 99px; border: 2px solid var(--color-bg); }
+  ::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.15); border-radius: 99px; }
 }
 
 @layer utilities {
@@ -125,32 +125,29 @@
   }
   .stat-num { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
   
-  /* Apple Glassmorphism & Luxury Glows */
-  .apple-glass {
-    background: rgba(18, 18, 24, 0.75);
+  /* Ultra-Clean Crystal Glassmorphism */
+  .crystal-glass {
+    background: rgba(12, 12, 18, 0.65);
+    backdrop-filter: blur(24px) saturate(160%);
+    -webkit-backdrop-filter: blur(24px) saturate(160%);
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  }
+  .crystal-card {
+    background: rgba(18, 18, 26, 0.7);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.08);
-  }
-  .apple-card {
-    background: var(--color-card);
-    border: 1px solid var(--color-line);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.5);
     transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   }
-  .apple-card:hover {
+  .crystal-card:hover {
     border-color: rgba(255, 255, 255, 0.18);
     transform: translateY(-2px);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.7), 0 0 30px -5px rgba(41, 151, 255, 0.15);
   }
   .glow-blue {
-    box-shadow: 0 0 30px -5px rgba(41, 151, 255, 0.25);
-  }
-  .glow-emerald {
-    box-shadow: 0 0 30px -5px rgba(48, 209, 88, 0.25);
-  }
-  .glow-amber {
-    box-shadow: 0 0 30px -5px rgba(255, 159, 10, 0.25);
+    box-shadow: 0 0 35px -5px rgba(41, 151, 255, 0.3);
   }
   .hairline { border-color: var(--color-line); }
 }
@@ -158,19 +155,19 @@
 /* Markdown output */
 .md { color: var(--color-ink-muted); }
 .md > * + * { margin-top: 1.1em; }
-.md h1, .md h2, .md h3, .md h4 { color: var(--color-ink); margin-top: 1.9em; }
+.md h1, .md h2, .md h3, .md h4 { color: var(--color-ink); margin-top: 1.8em; }
 .md h1 { font-size: 1.5rem; }
 .md h2 { font-size: 1.25rem; }
 .md h3 { font-size: 1.0625rem; }
 .md strong { color: var(--color-ink); font-weight: 600; }
 .md a { color: var(--color-accent); text-decoration: underline; text-underline-offset: 3px; }
-.md ul, .md ol { padding-left: 1.15em; }
-.md ul { list-style: none; padding-left: 0; }
-.md ul > li { position: relative; padding-left: 1.35em; margin-top: 0.5em; }
+.md ul, .md ol { padding-right: 1.15em; }
+.md ul { list-style: none; padding-right: 0; }
+.md ul > li { position: relative; padding-right: 1.35em; margin-top: 0.5em; }
 .md ul > li::before {
   content: '';
   position: absolute;
-  left: 0.15em;
+  right: 0.15em;
   top: 0.72em;
   width: 6px;
   height: 1px;
@@ -204,19 +201,10 @@
 }
 .md pre code { background: none; border: 0; padding: 0; font-size: 0.8125rem; line-height: 1.65; }
 .md table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
-.md th, .md td { border: 1px solid var(--color-line); padding: 8px 11px; text-align: left; }
+.md th, .md td { border: 1px solid var(--color-line); padding: 8px 11px; text-align: right; }
 .md th { background: var(--color-raised); font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.06em; }
 .md img { border-radius: var(--radius-md); }
 .md hr { border: 0; border-top: 1px solid var(--color-line); }
-
-/* Syntax highlighting */
-.hl { font-family: var(--font-mono); font-variant-ligatures: none; tab-size: 4; }
-.hl .ln { display: inline-block; width: 3em; padding-right: 1.2em; text-align: right; color: var(--color-ink-faint); opacity: 0.55; user-select: none; }
-.hl .c { color: var(--color-ink-faint); font-style: italic; }
-.hl .s { color: var(--color-accent-2); }
-.hl .n { color: var(--color-accent-3); }
-.hl .k { color: var(--color-accent); font-weight: 500; }
-.hl .f { color: var(--color-ink); }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }

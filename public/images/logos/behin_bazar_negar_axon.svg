@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bbna_grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7" />
+      <stop offset="50%" stop-color="#2563eb" />
+      <stop offset="100%" stop-color="#1d4ed8" />
+    </linearGradient>
+    <linearGradient id="bbna_accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#34d399" />
+    </linearGradient>
+  </defs>
+  <!-- Background Badge -->
+  <rect width="240" height="240" rx="48" fill="#0b0f19" />
+  <rect x="4" y="4" width="232" height="232" rx="44" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="2" />
+  
+  <!-- Geometric Market Research Node Emblem -->
+  <g transform="translate(45, 40)">
+    <!-- Hexagonal Analytics Mesh -->
+    <path d="M75 15 L125 45 L125 105 L75 135 L25 105 L25 45 Z" fill="none" stroke="url(#bbna_grad)" stroke-width="6" stroke-linejoin="round" />
+    <circle cx="75" cy="15" r="7" fill="#38bdf8" />
+    <circle cx="125" cy="45" r="7" fill="#2563eb" />
+    <circle cx="125" cy="105" r="7" fill="#38bdf8" />
+    <circle cx="75" cy="135" r="7" fill="#34d399" />
+    <circle cx="25" cy="105" r="7" fill="#38bdf8" />
+    <circle cx="25" cy="45" r="7" fill="#2563eb" />
+    
+    <!-- Central Axon Core -->
+    <circle cx="75" cy="75" r="22" fill="url(#bbna_accent)" opacity="0.9" />
+    <path d="M75 45 L75 105 M48 60 L102 90 M48 90 L102 60" stroke="#0b0f19" stroke-width="3" stroke-linecap="round" />
+  </g>
+  
+  <!-- Company Typography -->
+  <text x="120" y="196" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Vazir', sans-serif" font-size="13" font-weight="800" fill="#f8fafc" letter-spacing="1">BEHIN BAZAR</text>
+  <text x="120" y="214" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Vazir', sans-serif" font-size="10.5" font-weight="600" fill="#94a3b8" letter-spacing="2">NEGAR AXON</text>
+</svg>

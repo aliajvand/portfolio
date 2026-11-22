@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="100%" height="100%">
+  <defs>
+    <linearGradient id="aif_glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#6366f1" />
+      <stop offset="100%" stop-color="#a855f7" />
+    </linearGradient>
+    <linearGradient id="aif_spark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#ef4444" />
+    </linearGradient>
+  </defs>
+  <!-- Background Badge -->
+  <rect width="240" height="240" rx="48" fill="#090a10" />
+  <rect x="4" y="4" width="232" height="232" rx="44" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="2" />
+  
+  <!-- Innovation Factory Geometric Spark -->
+  <g transform="translate(60, 38)">
+    <!-- Dynamic Factory Cube / Hexagon Mesh -->
+    <path d="M60 10 L110 38 L110 95 L60 122 L10 95 L10 38 Z" fill="none" stroke="url(#aif_glow)" stroke-width="5" stroke-linejoin="round" />
+    
+    <!-- Isometric Top, Left, Right Planes -->
+    <path d="M60 10 L110 38 L60 66 L10 38 Z" fill="url(#aif_glow)" opacity="0.25" />
+    <path d="M10 38 L60 66 L60 122 L10 95 Z" fill="url(#aif_glow)" opacity="0.4" />
+    <path d="M110 38 L60 66 L60 122 L110 95 Z" fill="url(#aif_glow)" opacity="0.15" />
+    
+    <!-- AI Core Spark -->
+    <circle cx="60" cy="66" r="14" fill="url(#aif_spark)" />
+    <path d="M60 44 L60 88 M38 66 L82 66" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" />
+  </g>
+  
+  <!-- Typography -->
+  <text x="120" y="194" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Vazir', sans-serif" font-size="12" font-weight="800" fill="#f8fafc" letter-spacing="1">AI INNOVATION FACTORY</text>
+  <text x="120" y="212" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Vazir', sans-serif" font-size="10" font-weight="600" fill="#38bdf8" letter-spacing="1.5">کارخانه نوآوری</text>
+</svg>

@@ -24,7 +24,6 @@ export function initialTheme() {
   } catch {
     /* private mode, ignore */
   }
-  if (typeof matchMedia === 'function' && matchMedia('(prefers-color-scheme: light)').matches) return 'light'
   return 'dark'
 }
 

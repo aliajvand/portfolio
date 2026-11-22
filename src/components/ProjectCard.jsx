@@ -5,10 +5,17 @@ import RepoMeta from './RepoMeta.jsx'
 import Chips from './Chips.jsx'
 import Icon from './Icon.jsx'
 import site from '../content/site.config.js'
+import { useLocale } from '../lib/locale.jsx'
 
 export default function ProjectCard({ project, featured = false, index = 0 }) {
+  const { t, locale } = useLocale()
   const reduced = useReducedMotion()
   const githubUrl = project.repo ? `https://github.com/${site.githubUser}/${project.repo}` : null
+
+  const locDetail = t?.projectDetails?.[project.slug]
+  const title = locDetail?.title || project.title
+  const summary = locDetail?.summary || project.summary
+  const stats = locDetail?.stats || project.stats
 
   return (
     <motion.article
@@ -21,27 +28,27 @@ export default function ProjectCard({ project, featured = false, index = 0 }) {
     >
       <div className="grid gap-6 rounded-[22px] bg-[#12121a]/60 p-5 sm:p-7 lg:grid-cols-[380px_minmax(0,1fr)] lg:gap-8">
         {/* Project Visual / Poster Container */}
-        <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-black/40 shadow-inner group/img">
+        <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-black/40 shadow-inner group/img self-start w-full">
           <Link
             to={`/projects/${project.slug}`}
-            className="block aspect-[16/10] overflow-hidden rounded-2xl sm:aspect-[16/10]"
+            className="block aspect-[16/9] w-full overflow-hidden rounded-2xl"
           >
             <Figure
               spec={project.thumbnail}
-              alt={`${project.title} preview`}
-              className="h-full w-full object-cover object-top transition-transform duration-700 ease-out group-hover/img:scale-105"
+              alt={`${title} preview`}
+              className="h-full w-full object-cover object-center transition-transform duration-700 ease-out group-hover/img:scale-105"
             />
             {/* Subtle Apple gradient overlay */}
             <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60 group-hover/img:opacity-40 transition-opacity" />
           </Link>
 
           {/* Quick status badge over image */}
-          {project.stats && project.stats.length > 0 && (
+          {stats && stats.length > 0 && (
             <div className="absolute bottom-3 left-3 right-3 flex flex-wrap gap-2">
               <span className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-black/70 px-3 py-1 font-mono text-xs font-semibold text-white backdrop-blur-md">
                 <span className="h-1.5 w-1.5 rounded-full bg-accent animate-pulse" />
-                <span>{project.stats[0].value}</span>
-                <span className="text-ink-faint text-[10px]">({project.stats[0].label})</span>
+                <span>{stats[0].value}</span>
+                <span className="text-ink-faint text-[10px]">({stats[0].label})</span>
               </span>
             </div>
           )}
@@ -71,18 +78,18 @@ export default function ProjectCard({ project, featured = false, index = 0 }) {
 
             {/* Title */}
             <h3 className="mt-3 text-xl font-bold tracking-tight text-white transition-colors duration-200 group-hover:text-accent sm:text-2xl">
-              <Link to={`/projects/${project.slug}`}>{project.title}</Link>
+              <Link to={`/projects/${project.slug}`}>{title}</Link>
             </h3>
 
             {/* Summary */}
             <p className="mt-3 text-sm leading-relaxed text-ink-muted sm:text-base">
-              {project.summary}
+              {summary}
             </p>
 
             {/* Audited Key Metrics Pill Ribbon */}
-            {project.stats && project.stats.length > 1 && (
+            {stats && stats.length > 1 && (
               <div className="mt-4 flex flex-wrap gap-2">
-                {project.stats.slice(1, 4).map((st) => (
+                {stats.slice(1, 4).map((st) => (
                   <div
                     key={st.label}
                     className="inline-flex items-center gap-1.5 rounded-lg border border-white/10 bg-white/[0.04] px-2.5 py-1 font-mono text-xs text-ink-muted"
@@ -106,7 +113,7 @@ export default function ProjectCard({ project, featured = false, index = 0 }) {
               to={`/projects/${project.slug}`}
               className="inline-flex items-center gap-2 text-sm font-semibold text-accent transition-transform hover:translate-x-1"
             >
-              <span>مشاهده مستندات و بررسی کامل</span>
+              <span>{locale === 'fa' ? 'مشاهده مستندات و بررسی کامل' : 'View Documentation & Case Study'}</span>
               <Icon name="arrowRight" size={15} />
             </Link>
 
@@ -117,7 +124,7 @@ export default function ProjectCard({ project, featured = false, index = 0 }) {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1.5 font-mono text-xs text-ink-faint transition-colors hover:text-white"
               >
-                <span>سورس‌کد پروداکشن</span>
+                <span>{locale === 'fa' ? 'سورس‌کد پروداکشن' : 'Production Source'}</span>
                 <Icon name="externalLink" size={12} />
               </a>
             )}

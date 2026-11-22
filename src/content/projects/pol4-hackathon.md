@@ -1,29 +1,29 @@
 ---
-title: Tourism Demand Forecasting (Hackathon Pol 4)
+title: هکاتون چهارم کارخانه نوآوری (پیش‌بینی تقاضای اقامتگاه)
 slugOverride: pol4-hackathon
 categories: [Machine Learning, Time Series, Forecasting]
 repo: pol4_hackathon
 tech: [LightGBM Ensemble, Actuarial Chain-Ladder, Persian Calendar, FastAPI, Plotly Dash]
-summary: 2nd place out of 13 shortlisted teams at Hackathon Pol 4 (Jobama x AI Innovation Factory), generating 9,630 daily forecasts across 321 Iranian destination cities with 0.143 median WAPE across 119 walk-forward cutoffs.
+summary: کسب مقام دوم (مدال نقره) در هکاتون چهارم کارخانه نوآوری (جاباما × کارخانه نوآوری هوش مصنوعی) با تولید ۹,۶۳۰ پیش‌بینی تقاضای اقامتگاه در ۳۲۱ شهر ایران و خطای میانه ۰.۱۴۳ WAPE در ۱۱۹ کات‌آف زمانی پیوسته.
 thumbnail: /images/projects/pol4_hackathon_banner.png
 featured: true
 order: 4
 stats:
-  - label: Competition Placement
-    value: 2nd of 13
-  - label: Destination Cities
-    value: 321 Cities
-  - label: Walk-Forward Backtest WAPE
-    value: 0.143
-  - label: Engineered Features
-    value: 96 Features
+  - label: رتبه در مسابقه
+    value: رتبه ۲ از ۱۳
+  - label: شهرهای تحت پوشش
+    value: ۳۲۱ شهر
+  - label: خطای میانه WAPE
+    value: ۰.۱۴۳
+  - label: ویژگی‌های مهندسی‌شده
+    value: ۹۶ ویژگی
 ---
 
-## Overview
-Built during an intense 72-hour competition by Jobama and AI Innovation Factory, our two-person team placed 2nd of 13 shortlisted teams by forecasting accommodation search demand across 321 Iranian cities for Azar 1404 (9,630 total predictions).
+## بررسی اجمالی
 
-## Mathematical Modeling & Innovations
-- Actuarial Chain-Ladder Curves: Modeled booking accrual completion across a 59-day lead-time lookahead window.
-- LightGBM Seed Ensemble: Combined 96 engineered features with Persian Solar Calendar holiday uplifts and hard lower-bound constraints ($\hat{Y} \ge Y_{\text{logged}}$).
-- Robust Backtesting: Validated across 119 expanding-window cutoffs (median WAPE 0.143) and achieved 83.0% accuracy on Azar 1403 holdout replay.
+در یک رقابت فشرده ۷۲ ساعته تیمی با سازمان‌دهی جاباما و کارخانه نوآوری هوش مصنوعی، تیم دو نفره ما موفق به کسب **مقام دوم (مدال نقره)** در میان ۱۳ تیم منتخب شد. مأموریت ما پیش‌بینی تقاضای جستجو و رزرو اقامتگاه در ۳۲۱ شهر ایران برای آذر ۱۴۰۴ (مجموعاً ۹,۶۳۰ پیش‌بینی روزانه) بود.
 
+## نوآوری‌ها و متدولوژی مدلسازی ریاضی
+- **منحنی‌های اکچوئری Chain-Ladder:** تصحیح انباشت رزروها در افق ۵۹ روزه برای رفع کم‌نمایی روزهای نزدیک به رویداد.
+- **انسامبل بذر تصادفی LightGBM:** ترکیب ۹۶ متغیر تقویم جلالی، مناسبت‌ها، روزهای تعطیل و اعمال قید سخت کران پایین.
+- **بک‌تست زمانی دقیق:** آزمون مدل در ۱۱۹ کات‌آف زمانی رو به جلو با خطای ۰.۱۴۳ و دقت ۸۳٪ در بازپخش تاریخی.

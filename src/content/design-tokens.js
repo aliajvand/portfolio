@@ -1,14 +1,11 @@
 /**
  * ===========================================================================
  *  APPLE-INSPIRED DESIGN SYSTEM TOKENS
- *  Dana Font Integration + Apple Luxury Dark/Light Palette
+ *  Vazir (وزیر) Font Integration + Apple Luxury Dark/Light Palette
  * ===========================================================================
  */
 
 export const tokens = {
-  /* ------------------------------------------------------------------ */
-  /*  COLOURS — APPLE LUXURY OBSIDIAN & TITANIUM PALETTE                */
-  /* ------------------------------------------------------------------ */
   colors: {
     dark: {
       bg: '#050508', // Apple pitch black for OLED clarity
@@ -42,18 +39,12 @@ export const tokens = {
     },
   },
 
-  /* ------------------------------------------------------------------ */
-  /*  FONTS — DANA PRIMARY FONT WITH SF PRO / INTER FALLBACKS           */
-  /* ------------------------------------------------------------------ */
   fonts: {
-    display: "'Dana', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Inter', system-ui, sans-serif",
-    body: "'Dana', -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Inter', system-ui, sans-serif",
+    display: "'Vazir', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Inter', system-ui, sans-serif",
+    body: "'Vazir', -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Inter', system-ui, sans-serif",
     mono: "'SF Mono', 'JetBrains Mono', 'Fira Code', Menlo, monospace",
   },
 
-  /* ------------------------------------------------------------------ */
-  /*  SHAPE + SPACE — APPLE LARGE BENTO RADII                           */
-  /* ------------------------------------------------------------------ */
   radii: {
     sm: '10px',
     md: '16px',

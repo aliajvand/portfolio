@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react'
 import { Route, Routes, useLocation } from 'react-router-dom'
 import { applyTheme, initialTheme, storeTheme } from './lib/theme.js'
-import Rail from './components/Rail.jsx'
+import Navbar from './components/Navbar.jsx'
 import AmbientGlow from './components/AmbientGlow.jsx'
+import { LocaleProvider } from './lib/locale.jsx'
 import Home from './pages/Home.jsx'
 import About from './pages/About.jsx'
 import Projects from './pages/Projects.jsx'
@@ -38,7 +39,7 @@ export default function App() {
   }, [theme])
 
   return (
-    <>
+    <LocaleProvider>
       <a
         href="#main"
         className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-md focus:bg-accent focus:px-4 focus:py-2 focus:text-on-accent"
@@ -46,9 +47,12 @@ export default function App() {
         Skip to content
       </a>
       <AmbientGlow />
-      <Rail theme={theme} onToggleTheme={() => setTheme(theme === 'dark' ? 'light' : 'dark')} />
+      <Navbar
+        theme={theme}
+        onToggleTheme={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+      />
       <ScrollToTop />
-      <main id="main" className="relative z-10 lg:pl-[76px]">
+      <main id="main" className="relative z-10 w-full pt-2">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -62,6 +66,6 @@ export default function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
-    </>
+    </LocaleProvider>
   )
 }

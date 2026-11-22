@@ -3,8 +3,10 @@ import { Link } from 'react-router-dom'
 import { categoriesWithCounts, projects, showAllProjectsPage } from '../lib/content.js'
 import ProjectCard from './ProjectCard.jsx'
 import Icon from './Icon.jsx'
+import { useLocale } from '../lib/locale.jsx'
 
 export default function ProjectsExplorer({ compact = false }) {
+  const { locale } = useLocale()
   const categories = useMemo(() => categoriesWithCounts(), [])
   const [active, setActive] = useState('all')
   const list = active === 'all' ? projects : projects.filter((p) => p.categories.includes(active))
@@ -30,7 +32,7 @@ export default function ProjectsExplorer({ compact = false }) {
           aria-pressed={active === 'all'}
           className={btn(active === 'all')}
         >
-          <span>همه سیستم‌ها</span>
+          <span>{locale === 'fa' ? 'همه سیستم‌ها' : 'All Systems'}</span>
           <span className="font-mono text-[11px] opacity-80 rounded-full bg-white/10 px-2 py-0.5">
             {projects.length}
           </span>
@@ -57,7 +59,7 @@ export default function ProjectsExplorer({ compact = false }) {
           <>
             <span aria-hidden="true" className="my-2 hidden h-px bg-white/10 lg:block" />
             <Link to="/projects/all" className={`${btn(false)} lg:justify-start text-xs`}>
-              <span>آرشیو کامل گیت‌هاب</span>
+              <span>{locale === 'fa' ? 'آرشیو کامل گیت‌هاب' : 'Full GitHub Archive'}</span>
               <Icon name="arrowUpRight" size={13} />
             </Link>
           </>
