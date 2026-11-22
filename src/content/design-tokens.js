@@ -1,77 +1,74 @@
 /**
  * ===========================================================================
- *  THE ENTIRE DESIGN SYSTEM LIVES HERE.
- *  No other file in this project hardcodes a colour, font or radius.
- *  Change a value below, save, and the whole site updates.
+ *  APPLE-INSPIRED DESIGN SYSTEM TOKENS
+ *  Dana Font Integration + Apple Luxury Dark/Light Palette
  * ===========================================================================
  */
 
 export const tokens = {
   /* ------------------------------------------------------------------ */
-  /*  COLOURS                                                            */
-  /*  Left column = the name used in the UI. Right column = the colour.  */
+  /*  COLOURS — APPLE LUXURY OBSIDIAN & TITANIUM PALETTE                */
   /* ------------------------------------------------------------------ */
   colors: {
     dark: {
-      bg: '#070B14', //  navy-950  page background
-      surface: '#0C1220', //  navy-900  sidebar rail / panels
-      card: '#121A2E', //  navy-800  card surface
-      raised: '#1A2440', //  navy-700  hover / active state
-      line: '#223055', //  line-700  hairline borders
-      ink: '#EDF1FA', //  ink-100   primary text
-      inkMuted: '#B7C0DA', //  ink-300   secondary text
-      inkFaint: '#7C87A6', //  ink-500   muted text / labels
-      accent: '#4C7DFF', //  signal-blue    primary accent
-      accent2: '#35E7C6', //  signal-cyan    secondary accent
-      accent3: '#9B7BFA', //  signal-violet  rare tertiary accent
-      onAccent: '#050912', //  text printed on top of an accent colour
+      bg: '#050508', // Apple pitch black for OLED clarity
+      surface: '#0d0d12', // Apple dark graphite panels / glass
+      card: '#13131a', // Elevated bento card surface
+      raised: '#1c1c24', // Hover & active elevated state
+      line: 'rgba(255, 255, 255, 0.08)', // Apple hairline border
+      ink: '#f5f5f7', // High-contrast Apple off-white
+      inkMuted: '#a1a1a6', // Secondary text gray
+      inkFaint: '#6e6e73', // Faint captions / metadata
+      accent: '#2997ff', // Apple electric blue
+      accent2: '#30d158', // Apple emerald green
+      accent3: '#bf5af2', // Apple vibrant purple
+      accentAmber: '#ff9f0a', // Apple warm amber for alerts
+      onAccent: '#ffffff',
     },
     light: {
-      bg: '#F6F8FD', //  paper-50
-      surface: '#FFFFFF', //  paper-0
-      card: '#FFFFFF',
-      raised: '#EDF1FA', //  paper-200
-      line: '#D8DEEE', //  graphite-200
-      ink: '#0A1020', //  graphite-900
-      inkMuted: '#454F6B', //  graphite-600
-      inkFaint: '#6B7590', //  graphite-500
-      accent: '#2A56E0',
-      accent2: '#0E9C84',
-      accent3: '#7551DE',
-      onAccent: '#FFFFFF',
+      bg: '#f5f5f7', // Apple signature gray canvas
+      surface: '#ffffff', // Pure white frosted surface
+      card: '#ffffff', // Card surface
+      raised: '#e8e8ed', // Subtle elevated gray
+      line: 'rgba(0, 0, 0, 0.08)', // Soft hairline border
+      ink: '#1d1d1f', // Apple deep obsidian
+      inkMuted: '#515154', // Muted dark gray
+      inkFaint: '#86868b', // Faint tertiary gray
+      accent: '#0071e3', // Apple light mode action blue
+      accent2: '#0077ed',
+      accent3: '#af52de',
+      accentAmber: '#d97706',
+      onAccent: '#ffffff',
     },
   },
 
   /* ------------------------------------------------------------------ */
-  /*  FONTS                                                              */
-  /*  If you change these, also update the Google Fonts <link>           */
-  /*  on line ~28 of index.html so the browser downloads them.           */
+  /*  FONTS — DANA PRIMARY FONT WITH SF PRO / INTER FALLBACKS           */
   /* ------------------------------------------------------------------ */
   fonts: {
-    display: "'Space Grotesk', ui-sans-serif, system-ui, sans-serif",
-    body: "'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif",
-    mono: "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace",
+    display: "'Dana', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Inter', system-ui, sans-serif",
+    body: "'Dana', -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Inter', system-ui, sans-serif",
+    mono: "'SF Mono', 'JetBrains Mono', 'Fira Code', Menlo, monospace",
   },
 
   /* ------------------------------------------------------------------ */
-  /*  SHAPE + SPACE                                                      */
+  /*  SHAPE + SPACE — APPLE LARGE BENTO RADII                           */
   /* ------------------------------------------------------------------ */
   radii: {
-    sm: '8px',
-    md: '12px',
-    lg: '20px',
+    sm: '10px',
+    md: '16px',
+    lg: '24px',
+    xl: '32px',
     pill: '999px',
   },
 
-  /* Vertical rhythm. Section padding scales off these. */
   space: {
-    gutter: '28px', //  page side padding on mobile
-    gutterLg: '64px', //  page side padding on desktop
-    section: '112px', //  gap between major page sections
-    rail: '76px', //  width of the icon sidebar
+    gutter: '24px',
+    gutterLg: '56px',
+    section: '96px',
+    rail: '76px',
   },
 
-  /* Motion. Keep it restrained: no bounce, no elastic. */
   motion: {
     easeOut: 'cubic-bezier(0.16, 1, 0.3, 1)',
     fast: 0.18,

@@ -12,44 +12,55 @@ export default function ProjectCard({ project, featured = false, index = 0 }) {
 
   return (
     <motion.article
-      initial={reduced ? false : { opacity: 0, y: 18 }}
+      initial={reduced ? false : { opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-50px' }}
-      transition={{ duration: 0.5, delay: Math.min(index * 0.06, 0.24), ease: [0.16, 1, 0.3, 1] }}
-      whileHover={reduced ? undefined : { y: -4 }}
-      className="group overflow-hidden rounded-xl border border-line bg-card shadow-sm transition-all duration-300 hover:border-accent hover:shadow-md"
+      transition={{ duration: 0.6, delay: Math.min(index * 0.05, 0.2), ease: [0.16, 1, 0.3, 1] }}
+      whileHover={reduced ? undefined : { y: -3 }}
+      className="group relative overflow-hidden rounded-3xl border border-white/10 bg-[#0d0d14]/90 p-1 shadow-xl transition-all duration-300 hover:border-accent/50 hover:shadow-2xl hover:shadow-accent/5"
     >
-      <div
-        className={`grid gap-5 ${
-          featured ? 'p-0 md:grid-cols-[1fr]' : 'p-5 md:grid-cols-[280px_minmax(0,1fr)] md:gap-6'
-        }`}
-      >
-        <Link
-          to={`/projects/${project.slug}`}
-          className={`overflow-hidden border-line bg-surface block ${
-            featured ? 'border-b aspect-[21/9]' : 'aspect-[16/10] rounded-lg border'
-          }`}
-        >
-          <Figure
-            spec={project.thumbnail}
-            alt={`${project.title} preview`}
-            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
-          />
-        </Link>
+      <div className="grid gap-6 rounded-[22px] bg-[#12121a]/60 p-5 sm:p-7 lg:grid-cols-[380px_minmax(0,1fr)] lg:gap-8">
+        {/* Project Visual / Poster Container */}
+        <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-black/40 shadow-inner group/img">
+          <Link
+            to={`/projects/${project.slug}`}
+            className="block aspect-[16/10] overflow-hidden rounded-2xl sm:aspect-[16/10]"
+          >
+            <Figure
+              spec={project.thumbnail}
+              alt={`${project.title} preview`}
+              className="h-full w-full object-cover object-top transition-transform duration-700 ease-out group-hover/img:scale-105"
+            />
+            {/* Subtle Apple gradient overlay */}
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60 group-hover/img:opacity-40 transition-opacity" />
+          </Link>
 
-        <div className={featured ? 'px-6 pb-7 pt-5' : 'flex flex-col justify-between'}>
+          {/* Quick status badge over image */}
+          {project.stats && project.stats.length > 0 && (
+            <div className="absolute bottom-3 left-3 right-3 flex flex-wrap gap-2">
+              <span className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-black/70 px-3 py-1 font-mono text-xs font-semibold text-white backdrop-blur-md">
+                <span className="h-1.5 w-1.5 rounded-full bg-accent animate-pulse" />
+                <span>{project.stats[0].value}</span>
+                <span className="text-ink-faint text-[10px]">({project.stats[0].label})</span>
+              </span>
+            </div>
+          )}
+        </div>
+
+        {/* Project Content / Story */}
+        <div className="flex flex-col justify-between">
           <div>
+            {/* Category & GitHub Link */}
             <div className="flex flex-wrap items-center justify-between gap-2">
-              <p className="font-mono text-[11px] uppercase tracking-[0.1em] text-accent-2 font-semibold">
-                {project.categories.join(' / ')}
+              <p className="font-mono text-xs font-semibold uppercase tracking-wider text-accent">
+                {project.categories.join(' • ')}
               </p>
               {githubUrl && (
                 <a
                   href={githubUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label={`View ${project.title} on GitHub`}
-                  className="inline-flex items-center gap-1 font-mono text-[11px] text-ink-faint hover:text-accent-2 transition-colors"
+                  className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-3 py-1 font-mono text-xs text-ink-muted transition-colors hover:border-accent hover:text-accent"
                 >
                   <Icon name="github" size={13} />
                   <span>GitHub</span>
@@ -58,61 +69,56 @@ export default function ProjectCard({ project, featured = false, index = 0 }) {
               )}
             </div>
 
-            <h3
-              className={`mt-2 font-semibold tracking-tight transition-colors duration-200 group-hover:text-accent-2 ${
-                featured ? 'text-[1.65rem]' : 'text-[1.25rem]'
-              }`}
-            >
+            {/* Title */}
+            <h3 className="mt-3 text-xl font-bold tracking-tight text-white transition-colors duration-200 group-hover:text-accent sm:text-2xl">
               <Link to={`/projects/${project.slug}`}>{project.title}</Link>
             </h3>
 
-            <p className="mt-2.5 max-w-[68ch] text-[0.9375rem] text-ink-muted leading-relaxed">
+            {/* Summary */}
+            <p className="mt-3 text-sm leading-relaxed text-ink-muted sm:text-base">
               {project.summary}
             </p>
 
-            {/* Audited Metrics Badges */}
-            {project.stats && project.stats.length > 0 && (
-              <div className="mt-3.5 flex flex-wrap gap-2">
-                {project.stats.slice(0, 3).map((st) => (
+            {/* Audited Key Metrics Pill Ribbon */}
+            {project.stats && project.stats.length > 1 && (
+              <div className="mt-4 flex flex-wrap gap-2">
+                {project.stats.slice(1, 4).map((st) => (
                   <div
                     key={st.label}
-                    className="inline-flex items-center gap-1.5 rounded-md border border-line bg-raised px-2.5 py-1 text-[11px] font-mono text-ink"
+                    className="inline-flex items-center gap-1.5 rounded-lg border border-white/10 bg-white/[0.04] px-2.5 py-1 font-mono text-xs text-ink-muted"
                   >
-                    <span className="text-accent-2 font-semibold">{st.value}</span>
-                    <span className="text-ink-faint">({st.label})</span>
+                    <strong className="text-white font-semibold">{st.value}</strong>
+                    <span className="text-ink-faint text-[11px]">{st.label}</span>
                   </div>
                 ))}
               </div>
             )}
 
-            <div className="mt-3.5">
-              <RepoMeta repo={project.repo} placeholder={project.repoPlaceholder} />
-            </div>
-
-            <div className="mt-3">
+            {/* Tech Chips */}
+            <div className="mt-5">
               <Chips items={project.tech.slice(0, 6)} />
             </div>
           </div>
 
-          <div className="mt-5 flex items-center justify-between border-t border-line/60 pt-3">
+          {/* Action Row */}
+          <div className="mt-6 flex items-center justify-between border-t border-white/10 pt-4">
             <Link
               to={`/projects/${project.slug}`}
-              className="inline-flex items-center gap-2 text-[0.875rem] font-semibold text-accent-2"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-accent transition-transform hover:translate-x-1"
             >
-              Read full case study
-              <span className="transition-transform duration-300 group-hover:translate-x-1">
-                <Icon name="arrowRight" size={15} />
-              </span>
+              <span>مشاهده مستندات و بررسی کامل</span>
+              <Icon name="arrowRight" size={15} />
             </Link>
+
             {githubUrl && (
               <a
                 href={githubUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 text-[0.85rem] font-medium text-ink-muted hover:text-ink transition-colors"
+                className="inline-flex items-center gap-1.5 font-mono text-xs text-ink-faint transition-colors hover:text-white"
               >
-                <span>Code Repository</span>
-                <Icon name="externalLink" size={13} />
+                <span>سورس‌کد پروداکشن</span>
+                <Icon name="externalLink" size={12} />
               </a>
             )}
           </div>

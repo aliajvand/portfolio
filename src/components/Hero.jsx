@@ -4,25 +4,6 @@ import site from '../content/site.config.js'
 import Button from './Button.jsx'
 import Icon from './Icon.jsx'
 
-function Roles() {
-  const reduced = useReducedMotion()
-  return (
-    <p className="mt-5 flex flex-wrap justify-center gap-x-3 gap-y-1 font-mono text-[clamp(0.9rem,1.9vw,1.15rem)] text-accent-2">
-      {site.roles.map((role, i) => (
-        <motion.span
-          key={role}
-          initial={reduced ? false : { opacity: 0, y: 8 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.15 + i * 0.09, ease: [0.16, 1, 0.3, 1] }}
-        >
-          {role}
-          {i < site.roles.length - 1 && <span className="ml-3 text-ink-faint">/</span>}
-        </motion.span>
-      ))}
-    </p>
-  )
-}
-
 export default function Hero() {
   const reduced = useReducedMotion()
   const [photoLoaded, setPhotoLoaded] = useState(false)
@@ -35,33 +16,32 @@ export default function Hero() {
     .join('')
 
   return (
-    <header className="pb-16 pt-2 text-center" id="top">
+    <header className="relative pb-20 pt-6 text-center" id="top">
+      {/* Apple Keynote Ambient Background Glow */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute left-1/2 top-0 -translate-x-1/2 -translate-y-12 h-[340px] w-[580px] rounded-full bg-gradient-to-tr from-accent/20 via-accent-3/15 to-transparent blur-[100px] opacity-70"
+      />
+
+      {/* Profile Avatar with subtle Apple iridescent halo */}
       <motion.div
-        initial={reduced ? false : { opacity: 0, scale: 0.94 }}
+        initial={reduced ? false : { opacity: 0, scale: 0.92 }}
         animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-        className="relative mx-auto h-36 w-36"
+        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+        className="relative mx-auto h-32 w-32 sm:h-36 sm:w-36"
       >
         <span
           aria-hidden="true"
-          className="absolute -inset-3 rounded-full opacity-70 blur-[12px]"
+          className="absolute -inset-2 rounded-full opacity-60 blur-md"
           style={{
             background:
-              'conic-gradient(from 0deg, var(--color-accent), var(--color-accent-2), var(--color-accent-3), var(--color-accent))',
+              'conic-gradient(from 0deg, var(--color-accent), #30d158, var(--color-accent-3), var(--color-accent))',
           }}
         />
-        <span
-          aria-hidden="true"
-          className="absolute -inset-1 rounded-full"
-          style={{
-            background:
-              'conic-gradient(from 0deg, var(--color-accent), var(--color-accent-2), var(--color-accent-3), var(--color-accent))',
-          }}
-        />
-        <div className="relative grid h-full w-full place-items-center overflow-hidden rounded-full border-4 border-bg bg-card">
+        <div className="relative grid h-full w-full place-items-center overflow-hidden rounded-full border-2 border-white/20 bg-[#0d0d14] shadow-2xl">
           <img
             src={site.profilePhoto}
-            alt={`${site.name}, ${site.roles[0]}`}
+            alt={`${site.name}`}
             width="144"
             height="144"
             className={`absolute inset-0 h-full w-full object-cover ${photoLoaded ? 'opacity-100' : 'opacity-0'}`}
@@ -72,7 +52,7 @@ export default function Hero() {
             }}
           />
           <span
-            className={`relative font-display text-3xl font-semibold text-accent-2 ${
+            className={`relative font-display text-3xl font-bold tracking-tight text-white ${
               photoLoaded ? 'opacity-0' : 'opacity-100'
             }`}
           >
@@ -81,68 +61,91 @@ export default function Hero() {
         </div>
       </motion.div>
 
+      {/* Role Pill */}
       <motion.div
-        initial={reduced ? false : { opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5, delay: 0.12 }}
-        className="label mt-7 flex items-center justify-center gap-3"
+        initial={reduced ? false : { opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.1 }}
+        className="mt-6 flex items-center justify-center gap-2"
       >
-        <span className="h-2 w-2 rounded-full bg-accent-2 animate-pulse" />
-        <span>{site.availability}</span>
+        <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 font-mono text-xs font-semibold tracking-wider text-ink-muted backdrop-blur-md">
+          <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
+          <span>Senior Data Scientist & Machine Learning Architect</span>
+        </span>
       </motion.div>
 
+      {/* Name Headline */}
       <motion.h1
-        initial={reduced ? false : { opacity: 0, y: 18 }}
+        initial={reduced ? false : { opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, delay: 0.12, ease: [0.16, 1, 0.3, 1] }}
-        className="mt-4 text-[clamp(2.8rem,7vw,5rem)] font-bold tracking-[-0.04em]"
+        transition={{ duration: 0.7, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
+        className="mt-5 text-4xl font-extrabold tracking-tight text-white sm:text-6xl lg:text-7xl"
       >
         {site.name}
       </motion.h1>
 
-      <Roles />
-
+      {/* Primary Value Statement */}
       <motion.p
         initial={reduced ? false : { opacity: 0, y: 14 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
-        className="mx-auto mt-6 max-w-[62ch] text-[1.1rem] leading-relaxed text-ink-muted"
+        transition={{ duration: 0.7, delay: 0.22, ease: [0.16, 1, 0.3, 1] }}
+        className="mx-auto mt-4 max-w-2xl text-xl font-medium tracking-tight text-white/90 sm:text-2xl"
       >
-        {site.tagline}
+        مهندسی تصمیم، مدل‌سازی ریسک و هوش تجاری در مقیاس پروداکشن.
       </motion.p>
 
-      <div className="mt-8 flex flex-wrap justify-center gap-3">
+      {/* Subtitle */}
+      <motion.p
+        initial={reduced ? false : { opacity: 0, y: 14 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, delay: 0.28, ease: [0.16, 1, 0.3, 1] }}
+        className="mx-auto mt-4 max-w-[64ch] text-base leading-relaxed text-ink-muted sm:text-lg"
+      >
+        طراحی و استقرار سیستم‌های تصمیم‌یار از پایپ‌لاین‌های تراکنشی SQL و استاراسکیما تا سرویس‌های کم‌تأخیر یادگیری ماشین و شبیه‌سازهای مالی؛ متعهد به ارقام واقعی، اعتبارسنجی بدون نشت زمانی و بازدهی اقتصادی ملموس.
+      </motion.p>
+
+      {/* Action Buttons */}
+      <motion.div
+        initial={reduced ? false : { opacity: 0, y: 14 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, delay: 0.34, ease: [0.16, 1, 0.3, 1] }}
+        className="mt-8 flex flex-wrap items-center justify-center gap-3.5"
+      >
         <Button href="#projects" variant="primary" icon="folderGit">
-          Explore 8 Projects
+          مشاهده ۸ سیستم عملیاتی
         </Button>
-        <Button href="#resume" variant="secondary" icon="fileText">
-          ATS Resume
+        <Button href="#startup" variant="secondary" icon="sparkles">
+          پروژه استارتاپی RCI (به زودی)
         </Button>
-        <Button href="#contact" variant="ghost" icon="send">
-          Get in Touch
+        <Button href="#resume" variant="ghost" icon="fileText">
+          رزومه ATS (۲ صفحه)
         </Button>
-        <span aria-hidden="true" className="h-6 w-px self-center bg-line" />
-        <a
-          href={github.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="GitHub profile"
-          className="grid h-10 w-10 place-items-center rounded-md border border-line text-ink-faint transition-colors hover:border-accent hover:text-accent"
-        >
-          <Icon name="github" size={17} />
-        </a>
-        {linkedinReady && (
+
+        <span aria-hidden="true" className="h-6 w-px self-center bg-white/10 hidden sm:block" />
+
+        <div className="flex items-center gap-2">
           <a
-            href={linkedin.url}
+            href={github.url}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="LinkedIn profile"
-            className="grid h-10 w-10 place-items-center rounded-md border border-line text-ink-faint transition-colors hover:border-accent hover:text-accent"
+            aria-label="GitHub Profile"
+            className="grid h-11 w-11 place-items-center rounded-xl border border-white/10 bg-white/5 text-ink-muted transition-all hover:border-accent hover:text-white hover:bg-white/10"
           >
-            <Icon name="linkedin" size={17} />
+            <Icon name="github" size={18} />
           </a>
-        )}
-      </div>
+          {linkedinReady && (
+            <a
+              href={linkedin.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn Profile"
+              className="grid h-11 w-11 place-items-center rounded-xl border border-white/10 bg-white/5 text-ink-muted transition-all hover:border-accent hover:text-white hover:bg-white/10"
+            >
+              <Icon name="linkedin" size={18} />
+            </a>
+          )}
+        </div>
+      </motion.div>
     </header>
   )
 }

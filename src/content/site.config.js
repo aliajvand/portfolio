@@ -2,26 +2,34 @@
  * Who you are and where people can find you.
  * This is the only place your name, contact details and links are written.
  */
-const configuredBase = typeof import.meta !== 'undefined' && import.meta.env?.VITE_BASE_PATH
-  ? import.meta.env.VITE_BASE_PATH
-  : (typeof import.meta !== 'undefined' && import.meta.env?.BASE_URL ? import.meta.env.BASE_URL : '/')
+const configuredBase =
+  typeof import.meta !== 'undefined' && import.meta.env?.VITE_BASE_PATH
+    ? import.meta.env.VITE_BASE_PATH
+    : typeof import.meta !== 'undefined' && import.meta.env?.BASE_URL
+    ? import.meta.env.BASE_URL
+    : '/'
 const basePath = configuredBase.replace(/\/$/, '') || ''
 
 export const site = {
   /* --- identity ---------------------------------------------------- */
-  name: 'Ali Ajvand',
-  roles: ['Data Scientist', 'ML Engineer', 'BI Developer'],
-  tagline: 'Data Scientist who builds leakage-safe models and dashboards that drive real decisions.',
+  name: 'علی اجوند (Ali Ajvand)',
+  roles: [
+    'Senior Data Scientist',
+    'Machine Learning Architect',
+    'Commercial Intelligence Engineer',
+  ],
+  tagline:
+    'مهندسی تصمیم، مدل‌سازی ریسک و هوش تجاری در مقیاس پروداکشن — بدون نشت زمانی و با ارقام اثبات‌شده.',
   valueProp:
-    'End-to-end data science and BI: from Python/SQL pipelines to ML models and Power BI dashboards. I build systems that survive production — not notebooks that impress on test data.',
-  location: 'Tehran, Iran',
+    'طراحی و استقرار سیستم‌های تصمیم‌یار از پایپ‌لاین‌های تراکنشی SQL و استاراسکیما تا سرویس‌های کم‌تأخیر یادگیری ماشین و شبیه‌سازهای مالی؛ متعهد به ارقام واقعی، اعتبارسنجی بدون نشت زمانی و بازدهی اقتصادی ملموس.',
+  location: 'تهران، ایران',
   timezone: 'UTC+3:30',
-  availability: 'Available for full-time remote or on-site roles',
+  availability: 'آماده همکاری تمام‌وقت در موقعیت‌های ارشد دیتا و پایلوت‌های صنعتی',
 
   /* --- SEO --------------------------------------------------------- */
   url: `https://aliajvand.github.io${basePath}`,
   description:
-    'Ali Ajvand — Data Scientist, ML Engineer, and BI Developer. Predictive modeling, credit risk, demand forecasting, Power BI dashboards, and MLOps.',
+    'علی اجوند — Senior Data Scientist & ML Architect. پیش‌بینی تقاضای زنجیره تأمین، موتورهای تصمیم‌گیری ریسک اعتباری، هوش تجاری و پلتفرم‌های ممیزی سود.',
   ogImage: '/og-image.png',
   twitterHandle: '',
 
@@ -41,7 +49,7 @@ export const site = {
       id: 'linkedin',
       label: 'LinkedIn',
       icon: 'linkedin',
-      url: 'https://linkedin.com/in/ali-ajvand-2342b3232',
+      url: 'https://linkedin.com/in/aliajvand',
     },
   ],
 
@@ -50,11 +58,11 @@ export const site = {
 
   /* --- projects ----------------------------------------------------- */
   projectCategories: [
-    'Data Analysis',
     'Machine Learning',
+    'Forecasting & Time Series',
+    'Decision Engines & Risk',
     'Business Intelligence',
-    'Dashboard',
-    'Automation',
+    'Healthcare & NLP',
   ],
   allProjectsThreshold: 6,
 }

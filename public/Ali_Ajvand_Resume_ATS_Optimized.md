@@ -5,13 +5,13 @@ Tehran, Iran | +98 919 525 3462 | aliajvand@gmail.com | [github.com/aliajvand](h
 ---
 
 ## PROFESSIONAL SUMMARY
-Quantitative Data Scientist and Machine Learning Engineer specializing in risk decision engines, quantitative market microstructure, and high-stakes operational forecasting. Proven track record of taking models from raw transactional SQL into low-latency production microservices: cut loan default bad rate by **38%** under asymmetric cost frontiers, achieved **69.85% directional accuracy** on equity order flows with Graph Neural Networks, and won **2nd place out of 13 teams** at Hackathon Pol 4 via actuarial chain-ladder accrual modeling. Core focus on expanding-window walk-forward validation, zero temporal leakage, and defensible statistical calibration.
+Quantitative Data Scientist and Machine Learning Engineer specializing in risk decision engines, quantitative market microstructure, and high-stakes operational forecasting. Proven track record of taking models from raw transactional SQL into low-latency production microservices: cut loan default bad rate by **38%** under asymmetric cost frontiers, achieved **69.85% directional accuracy** on equity order flows with Graph Neural Networks, and won **2nd place out of 13 teams** at Hackathon Pol 4 via actuarial chain-ladder accrual modeling. Dedicated to expanding-window walk-forward validation, zero temporal leakage, and defensible statistical calibration.
 
 ---
 
 ## TECHNICAL SKILLS
 
-- **Machine Learning & Risk Modeling:** Probability Scorecards, Isotonic Calibration, Monotonic Constraints, Cost-Sensitive Frontier Optimization, LightGBM, XGBoost, CatBoost, Scikit-Learn, PyTorch, Graph Neural Networks (GNN/GCN), LSTM, SHAP Interpretability, Survival Analysis.
+- **Machine Learning & Risk Modeling:** Probability Scorecards, Isotonic Calibration, Monotonic Constraints, Cost-Sensitive Frontier Optimization, LightGBM, XGBoost, CatBoost, Scikit-Learn, PyTorch, Graph Neural Networks (GNN/GCN), LSTM, SHAP Interpretability.
 - **Quantitative Analytics & Forecasting:** Order Flow & Smart-Money Imbalance, Rolling Volatility (ATR), Actuarial Chain-Ladder Curves, Hierarchical Time-Series, Expanding Walk-Forward Validation, Safety Stock & Dynamic Reorder Points.
 - **Data Engineering & SQL:** PostgreSQL, SQLite, DuckDB, MySQL, SQL Server, T-SQL, Apache Parquet, Star Schema Design (Kimball), CTEs, Window Functions, As-Of Merges, Automated ETL Pipelines.
 - **Serving & Production:** FastAPI, REST APIs, Pydantic, Plotly/Dash Interactive Portals, Docker, Git/GitHub Actions CI/CD, PyTest (TDD), Linux/Bash.
@@ -45,7 +45,7 @@ Quantitative Data Scientist and Machine Learning Engineer specializing in risk d
 
 ### 5. Customer Churn Intelligence & Contract Value-at-Risk *(Enterprise B2B)*
 *Python, Isotonic Logistic Regression, DuckDB Star Schema, FastAPI, Plotly/Dash* | [GitHub: customer_churn_intelligence](https://github.com/aliajvand/customer_churn_intelligence)
-- **Captured 50.53% of churners with 2.52x decile lift** at a 20% outreach budget constraint, protecting over **$176,700 in annual contract Value-at-Risk** ($\text{VaR} = \hat{p} \times \text{Charges} \times 12$) across 7,043 enterprise accounts.
+- **Captured 50.53% of churners with 2.52x decile lift** at a 20% outreach budget constraint, protecting over **$176,700 in annual contract Value-at-Risk** across 7,043 enterprise accounts.
 
 ### 6. Multi-Store Retail Demand Forecasting & Automated Replenishment *(Supply Chain)*
 *Python, Hierarchical LightGBM, Non-Overlapping Walk-Forward Folds, SQLite, Dash* | [GitHub: demand_sales_forecasting](https://github.com/aliajvand/demand_sales_forecasting)
@@ -55,11 +55,16 @@ Quantitative Data Scientist and Machine Learning Engineer specializing in risk d
 
 ## PROFESSIONAL EXPERIENCE
 
+### Founder & Machine Learning Architect (Stealth)
+**RCI — Commercial Decision & Margin Intelligence Platform** | Tehran, Iran | *Nov 2026 – Present*
+- **Architected a read-only analytical decision layer** connecting to enterprise ERP and sales data to isolate volume-driven growth from nominal inflation across retail distribution networks.
+- **Engineered pocket-margin waterfall models** accounting for tiered discounts, rebates, giveaways, and delayed check financing costs to detect unprofitable sales with 100% financial auditability.
+- **Formulated probabilistic demand forecasting baselines** (LightGBM Quantile P10/P50/P90) and check-risk radars to optimize replenishment safety stock and mitigate credit exposure.
+
 ### Data Analyst / Analytics Engineer (Project-Based)
 **BehinBazar (Account: Japan Tobacco International — JTI)** | Tehran, Iran | *Apr 2025 – Nov 2025*
 - **Automated 100% of daily field-sales operational reporting** across nationwide retail audits by building an automated Python and Google Sheets API pipeline, eliminating daily manual data consolidation.
 - **Built geospatial store-coverage and route-planning tools** in Python (Folium), replacing ad-hoc field visits with structured route clusters for regional auditors.
-- **Engineered data validation and clean audit tables** ensuring field team KPI tracking matched corporate sales compliance targets.
 
 ---
 
@@ -78,10 +83,8 @@ Quantitative Data Scientist and Machine Learning Engineer specializing in risk d
 - **Data Scientist Professional Bootcamp (100+ Hours)** — Daneshkar (2025)
 - **LangChain & LLM Systems Development** — freeCodeCamp (2026)
 - **Business Intelligence & Data Warehouse Architecture** — Udemy (2023)
-- **Data Analyst Professional Certification** — Alex The Analyst (2023)
 
 ---
 
 ## LANGUAGES
-- **Persian:** Native
-- **English:** Professional Working Proficiency (Technical documentation, engineering discussions, paper review)
+- **Persian:** Native | **English:** Professional Working Proficiency
