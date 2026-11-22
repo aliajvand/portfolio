@@ -1,92 +1,87 @@
 # Ali Ajvand
-**Senior Data Scientist & Analytics Engineer**
+**Senior Data Scientist & Machine Learning Engineer**
 Tehran, Iran | +98 919 525 3462 | aliajvand@gmail.com | [github.com/aliajvand](https://github.com/aliajvand) | [linkedin.com/in/aliajvand](https://linkedin.com/in/aliajvand) | [aliajvand.github.io/portfolio](https://aliajvand.github.io/portfolio)
 
 ---
 
 ## PROFESSIONAL SUMMARY
-Results-driven **Data Scientist & Analytics Engineer** with a proven track record of architecting and deploying end-to-end production data products—from raw ingestion and dimensional star schemas to leakage-audited machine learning pipelines, sub-second FastAPI microservices, and interactive operations portals. Demonstrated impact across retail demand forecasting (**72.5% error reduction**), credit risk underwriting (**38% default reduction** under cost-sensitive policy frontiers), customer retention (**2.52x decile lift factor** capturing 50.5% of churners), and quantitative equity forecasting (**69.85% directional accuracy** with Graph Neural Networks). Placed **2nd of 13 teams** at Hackathon Pol 4 for large-scale time-series demand forecasting. Dedicated to zero-leakage validation, expanding-window walk-forward benchmarking, and clean reproducible software engineering.
+Quantitative Data Scientist and Machine Learning Engineer specializing in risk decision engines, quantitative market microstructure, and high-stakes operational forecasting. Proven track record of taking models from raw transactional SQL into low-latency production microservices: cut loan default bad rate by **38%** under asymmetric cost frontiers, achieved **69.85% directional accuracy** on equity order flows with Graph Neural Networks, and won **2nd place out of 13 teams** at Hackathon Pol 4 via actuarial chain-ladder accrual modeling. Core focus on expanding-window walk-forward validation, zero temporal leakage, and defensible statistical calibration.
 
 ---
 
 ## TECHNICAL SKILLS
 
-- **Machine Learning & Deep Learning:** LightGBM, XGBoost, CatBoost, Scikit-Learn, PyTorch, Graph Neural Networks (GNN/GCN), Recurrent Neural Networks (LSTM), Transfer Learning (ResNet-50), Monotonic Constraints, Isotonic Probability Calibration, SHAP Interpretability, Cost-Sensitive Frontier Optimization.
-- **Time-Series & Forecasting:** Hierarchical Forecasting, Expanding-Window Walk-Forward Cross Validation, Actuarial Chain-Ladder Accrual Curves, Seasonality & Trend Decomposition, Safety Stock & Reorder Point (ROP) Modeling, Rolling Volatility (ATR).
-- **Data Engineering & SQL:** SQL, PostgreSQL, SQLite, DuckDB, MySQL, SQL Server, T-SQL, Apache Parquet, Dimensional Star Schema Design (Kimball), ETL/ELT Pipeline Automation, CTEs, Window Functions, As-Of Merges, Data Quality Auditing.
-- **LLMs & NLP Systems:** Retrieval-Augmented Generation (RAG), FAISS Dense Vector Indexing, Sentence-Transformers, Hugging Face, LangChain, Groq API (Llama 3.1), Clinical NLP, Document Ingestion & OCR.
-- **Software Engineering & Serving:** FastAPI, Flask, RESTful API Design, Pydantic, Plotly/Dash, Docker, Git/GitHub Actions CI/CD, PyTest (Test-Driven Development), Ruff, Linux/Bash Shell.
-- **Business Intelligence & Analytics:** Plotly, Dash, Power BI (Advanced DAX, Drill-Through, Star Schema Modeling), Seaborn, Matplotlib, Folium Geospatial Route Mapping.
+- **Machine Learning & Risk Modeling:** Probability Scorecards, Isotonic Calibration, Monotonic Constraints, Cost-Sensitive Frontier Optimization, LightGBM, XGBoost, CatBoost, Scikit-Learn, PyTorch, Graph Neural Networks (GNN/GCN), LSTM, SHAP Interpretability, Survival Analysis.
+- **Quantitative Analytics & Forecasting:** Order Flow & Smart-Money Imbalance, Rolling Volatility (ATR), Actuarial Chain-Ladder Curves, Hierarchical Time-Series, Expanding Walk-Forward Validation, Safety Stock & Dynamic Reorder Points.
+- **Data Engineering & SQL:** PostgreSQL, SQLite, DuckDB, MySQL, SQL Server, T-SQL, Apache Parquet, Star Schema Design (Kimball), CTEs, Window Functions, As-Of Merges, Automated ETL Pipelines.
+- **Serving & Production:** FastAPI, REST APIs, Pydantic, Plotly/Dash Interactive Portals, Docker, Git/GitHub Actions CI/CD, PyTest (TDD), Linux/Bash.
+- **BI & Spatial Intelligence:** Power BI (Advanced DAX, Modeling), Tableau, Folium Geospatial Routing, Seaborn, Matplotlib.
+
+---
+
+## SELECTED PRODUCTION SYSTEMS & DECISION PLATFORMS
+
+### 1. Credit Risk Decision Engine & Underwriting Policy Frontier *(Banking & FinTech)*
+*Python, LightGBM, Monotonic Constraints, Isotonic Calibration, FastAPI, Plotly/Dash* | [GitHub: credit_risk_decision_engine](https://github.com/aliajvand/credit_risk_decision_engine)
+- **Cut loan default bad rate by 38%** (15.9% down to 9.8%) while keeping a **54.4% approval rate** across 30,000 credit accounts by replacing naive $p < 0.5$ cutoffs with a 5:1 asymmetric cost-sensitive frontier.
+- **Achieved 0.892 ROC-AUC and 3.17x top-decile lift** by enforcing domain monotonic constraints on debt-to-income and delinquency features; audited features to strictly exclude protected demographic attributes.
+- **Deployed a sub-50ms FastAPI service** (`/score`, `/policy-frontier`) connected to an interactive executive underwriting simulator.
+
+### 2. Quantitative Market Microstructure & Asset Flow Engine *(FinTech & Crypto/Equities)*
+*PyTorch, Graph Neural Networks (GCN), LSTM, Walk-Forward CV, SQLite, FastAPI, Dash* | [GitHub: tehran_stock_forecasting](https://github.com/aliajvand/tehran_stock_forecasting)
+- **Delivered 69.85% directional accuracy and 0.7024 ROC-AUC** on out-of-sample regimes by building a Hybrid GNN + LSTM modeling inter-asset correlation graphs across 428 instruments.
+- **Engineered 80 quantitative indicators over 10,874 daily price and order-flow snapshots**, capturing institutional smart-money accumulation ratios (Hoghughi net flows) and 20-day Average True Range (ATR).
+- **Prevented temporal lookahead** through a strict 5-fold expanding-window cross-validation under daily regulatory price caps.
+
+### 3. Actuarial Demand & Loss-Accrual Forecasting Engine *(Insurance & Risk Modeling)*
+*LightGBM Ensemble, Actuarial Chain-Ladder Curves, Persian Calendar, FastAPI* | [GitHub: pol4_hackathon](https://github.com/aliajvand/pol4_hackathon)
+- **Placed 2nd of 13 shortlisted teams** in a 72-hour competition (Jobama × AI Innovation Factory), forecasting 9,630 daily time-series across 321 destination cities.
+- **Attained 0.143 median WAPE across 119 walk-forward backtest cutoffs** (83.0% accuracy on historical holdout replay) by coupling actuarial booking completion curves with a 96-feature LightGBM seed ensemble.
+
+### 4. Automotive Intelligence & Used-Vehicle Valuation Engine *(Automotive & Mobility)*
+*Power BI Star Schema, DAX, Python, Linear Regression, Gradient Boosting, SHAP* | [GitHub: ev_automotive_analytics](https://github.com/aliajvand/ev_automotive_analytics)
+- **Achieved vehicle valuation accuracy of $R^2 = 0.8326$ and 19.34% MAPE** across 15,409 listings, outperforming baseline dealer heuristics (41.79% error); audited drivetrain proxy leakage to safeguard live deployment.
+- **Architected a star schema over 289,555 EV registrations** to optimize municipal charging infrastructure dispatch and battery range adoption.
+
+### 5. Customer Churn Intelligence & Contract Value-at-Risk *(Enterprise B2B)*
+*Python, Isotonic Logistic Regression, DuckDB Star Schema, FastAPI, Plotly/Dash* | [GitHub: customer_churn_intelligence](https://github.com/aliajvand/customer_churn_intelligence)
+- **Captured 50.53% of churners with 2.52x decile lift** at a 20% outreach budget constraint, protecting over **$176,700 in annual contract Value-at-Risk** ($\text{VaR} = \hat{p} \times \text{Charges} \times 12$) across 7,043 enterprise accounts.
+
+### 6. Multi-Store Retail Demand Forecasting & Automated Replenishment *(Supply Chain)*
+*Python, Hierarchical LightGBM, Non-Overlapping Walk-Forward Folds, SQLite, Dash* | [GitHub: demand_sales_forecasting](https://github.com/aliajvand/demand_sales_forecasting)
+- **Reduced forecast error by 72.5%** (WMAPE decreased from 34.06% heuristic to **9.36%**) across **844,338 store-days and 1,115 stores**, automating safety stock and dynamic reorder points for 98.3% of stores.
 
 ---
 
 ## PROFESSIONAL EXPERIENCE
 
 ### Data Analyst / Analytics Engineer (Project-Based)
-**BehinBazar (Client: Japan Tobacco International — JTI)** | Tehran, Iran | *Apr 2025 – Nov 2025*
-- **Accomplished 100% automated daily operational reporting** across nationwide retail field-survey operations by engineering an end-to-end data pipeline from scratch utilizing Python, Excel, and Google Sheets APIs, completely eliminating recurring manual data preparation overhead.
-- **Optimized daily surveyor store assignments and route efficiency** by building custom geospatial clustering and mapping tooling in Python (Folium), converting ad-hoc visit dispatching into a structured, repeatable routing system.
-- **Improved survey team store coverage tracking and audit compliance** by modeling surveyor progress KPIs and field data feeds into structured analytical tables for operational leadership.
+**BehinBazar (Account: Japan Tobacco International — JTI)** | Tehran, Iran | *Apr 2025 – Nov 2025*
+- **Automated 100% of daily field-sales operational reporting** across nationwide retail audits by building an automated Python and Google Sheets API pipeline, eliminating daily manual data consolidation.
+- **Built geospatial store-coverage and route-planning tools** in Python (Folium), replacing ad-hoc field visits with structured route clusters for regional auditors.
+- **Engineered data validation and clean audit tables** ensuring field team KPI tracking matched corporate sales compliance targets.
 
 ---
 
-## FEATURED PRODUCTION DATA PRODUCTS
+## EDUCATION
 
-### 1. Demand & Sales Forecasting Platform (FMCG Retail)
-*Technologies: Python, LightGBM, Walk-Forward Validation, FastAPI, Plotly/Dash, SQLite Star Schema* | [GitHub: demand_sales_forecasting](https://github.com/aliajvand/demand_sales_forecasting)
-- **Reduced forecast error by 72.5%** (WMAPE decreased from 34.06% planner heuristic to **9.36%**) across **844,338 open store-days and 1,115 retail stores** by engineering hierarchical LightGBM models over three non-overlapping 42-day walk-forward validation folds.
-- **Enabled automated replenishment for 98.3% of chain stores** by calculating store-specific safety stocks and dynamic Reorder Points (ROP), eliminating manual inventory review for stores maintaining $<15\%$ WMAPE.
-- **Served predictions in sub-50ms latency** via a dedicated FastAPI microservice (`/forecast`, `/replenishment`) paired with a Plotly/Dash operations portal.
-
-### 2. Credit Risk Decision Engine (Underwriting & Policy Frontier)
-*Technologies: LightGBM, Monotonic Constraints, Cost-Sensitive Optimization, FastAPI, Dash* | [GitHub: credit_risk_decision_engine](https://github.com/aliajvand/credit_risk_decision_engine)
-- **Decreased default bad rate by 38%** (from 15.9% to 9.8%) while maintaining a **54.4% approval rate** on 30,000 credit bureau accounts by formulating a 5:1 false-approval to false-decline cost-sensitive threshold policy frontier instead of naive $p < 0.50$ classification.
-- **Achieved 0.892 ROC-AUC** and 3.17x lift in the riskiest decile by enforcing domain-driven monotonic constraints on debt-to-income (DTI) and delinquency features while strictly excluding protected demographic attributes.
-- **Deployed an interactive underwriting simulator** with real-time policy loss-ratio sliders and automated PyTest validation suites.
-
-### 3. Customer Churn Intelligence & Lifetime Value Preservation
-*Technologies: Python, Calibrated L1 Logistic, Isotonic Regression, DuckDB/SQL, FastAPI, Dash* | [GitHub: customer_churn_intelligence](https://github.com/aliajvand/customer_churn_intelligence)
-- **Captured 50.53% of all customer churners at 67.02% precision** under a constrained 20% call-center outreach capacity budget, securing a **2.52x capacity lift factor** over random retention outreach on 7,043 customer accounts.
-- **Protected over \$176,000 in annualized contract revenue at risk** by prioritizing outreach via expected Value-at-Risk ($\text{VaR} = \hat{p} \times \text{Charges} \times 12$) based on isotonically calibrated probabilities (ROC-AUC **0.8448**).
-- **Engineered an analytical star schema and windowed SQL cohorts** analyzing contract elasticity and customer survival degradation.
-
-### 4. Tehran Stock Exchange Quantitative Forecasting Engine (TSETMC)
-*Technologies: PyTorch, Graph Convolutional Networks (GCN), LSTM, SQLite, FastAPI, Plotly/Dash* | [GitHub: tehran_stock_forecasting](https://github.com/aliajvand/tehran_stock_forecasting)
-- **Achieved 69.85% directional accuracy and 0.7024 ROC-AUC** on out-of-sample holdout regimes by architecting a Hybrid LSTM + Graph Convolutional Network that models spatial sector correlations across 428 listed equities.
-- **Indexed 10,874 daily price snapshots and 10,876 institutional order flow facts**, engineering 80 quantitative features tracking smart-money accumulation ratios (Hoghughi net inflow) and 20-day Average True Range (ATR).
-- **Eliminated temporal lookahead bias** by enforcing a 5-fold expanding-window walk-forward cross validation protocol under TSETMC ±5% daily price boundaries.
-
-### 5. Tourism & Accommodation Search Demand Forecasting (Hackathon Pol 4)
-*Technologies: LightGBM Ensemble, Actuarial Chain-Ladder Curves, Solar Calendar, FastAPI* | [GitHub: pol4_hackathon](https://github.com/aliajvand/pol4_hackathon)
-- **Awarded 2nd Place out of 13 shortlisted teams** in a 72-hour competition hosted by Jobama and AI Innovation Factory, generating 9,630 daily forecasts across 321 Iranian destination cities for Azar 1404.
-- **Secured 0.143 median WAPE across 119 walk-forward backtests** (and 83.0% accuracy on Azar 1403 historical holdout replay) by coupling actuarial booking accrual completion curves with a 96-feature LightGBM seed ensemble.
-
-### 6. Brazilian E-Commerce Logistics Delay & Lead Time Analytics (Olist)
-*Technologies: Scikit-Learn, As-Of Temporal Joins, Star Schema SQL, FastAPI, Plotly/Dash* | [GitHub: olist-delivery-analytics](https://github.com/aliajvand/olist-delivery-analytics)
-- **Delivered 2.07x delay mitigation lift** over random carrier dispatching by training checkout-time delivery delay classifiers and lead-time regressors across 100,000+ orders, strictly eliminating post-purchase scan leakage.
-- **Optimized carrier expedite queue spend** via a 5.4:1 cost ratio matrix (65 BRL delay penalty vs 12 BRL priority shipping).
-
-### 7. Clinical Decision-Support RAG Platform
-*Technologies: PyTorch, Sentence-Transformers, FAISS, FastAPI, Docker, OCR* | [GitHub: medical](https://github.com/aliajvand/medical)
-- **Delivered sub-15ms semantic search latency with 100% data provenance** across accredited clinical databases (MIMIC-III, DrugBank, SIDER) using frozen biomedical sentence embeddings and FAISS vector indexing.
-
-### 8. Electric Vehicle & Automotive Market Intelligence
-*Technologies: Python, Power BI Star Schema, DAX, Linear & Gradient Boosting Regression* | [GitHub: ev_automotive_analytics](https://github.com/aliajvand/ev_automotive_analytics)
-- **Achieved used vehicle pricing accuracy of $R^2 = 0.8326$ and MAPE 19.34%** on 15,409 listings, outperforming dealer heuristics (41.79% error); audited drivetrain proxy leakage to prevent production model failure.
+- **M.Sc. in Computer Engineering — Artificial Intelligence**
+  *Islamic Azad University, Electronic Campus* | Tehran, Iran | *Started Oct 2025 – Present (Enrolled)*
+- **B.Sc. in Computer Engineering**
+  *Islamic Azad University, Science & Research Branch* | Tehran, Iran | *Graduated 2025 (GPA: 16.0 / 20.0)*
 
 ---
 
-## EDUCATION & CERTIFICATIONS
+## HONORS & PROFESSIONAL CERTIFICATIONS
 
-- **B.Sc. in Computer Engineering** | Islamic Azad University, Science & Research Branch, Tehran (GPA: 16.0 / 20.0) | *Graduated 2026*
-- **National M.Sc. Entrance Examination in Computer Engineering** | Completed 2026
-- **Data Scientist Professional Bootcamp (100+ Hours)** | Daneshkar (2025)
-- **LangChain for LLM Application Development** | freeCodeCamp (2026)
-- **Business Intelligence & Data Warehouse Architecture** | Udemy (2023)
-- **Data Analyst Professional Bootcamp** | Alex The Analyst (2023)
+- **2nd Place Winner (Silver Medal)** — Hackathon Pol 4 Demand Forecasting (Jobama × AI Innovation Factory, 2026)
+- **Data Scientist Professional Bootcamp (100+ Hours)** — Daneshkar (2025)
+- **LangChain & LLM Systems Development** — freeCodeCamp (2026)
+- **Business Intelligence & Data Warehouse Architecture** — Udemy (2023)
+- **Data Analyst Professional Certification** — Alex The Analyst (2023)
 
 ---
 
 ## LANGUAGES
 - **Persian:** Native
-- **English:** Professional Working Proficiency (Technical reading, engineering documentation & writing)
+- **English:** Professional Working Proficiency (Technical documentation, engineering discussions, paper review)

@@ -3,14 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ali Ajvand - Resume (ATS-Optimized)</title>
+  <title>Ali Ajvand - Senior Data Scientist & ML Engineer Resume</title>
   <style>
+    @page {
+      size: A4;
+      margin: 10mm 14mm 10mm 14mm;
+    }
     :root {
-      --text: #1a1a24;
-      --muted: #4a5568;
+      --text: #0f172a;
+      --muted: #334155;
+      --faint: #64748b;
       --accent: #0284c7;
-      --border: #e2e8f0;
-      --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      --accent-dark: #0369a1;
+      --border: #cbd5e1;
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     }
     * {
       box-sizing: border-box;
@@ -20,86 +28,28 @@
     body {
       font-family: var(--font-sans);
       color: var(--text);
-      line-height: 1.5;
-      background: #f8fafc;
-      padding: 32px 16px;
+      line-height: 1.38;
+      background: var(--bg);
+      padding: 24px 16px;
+      font-size: 9.1pt;
+      -webkit-font-smoothing: antialiased;
     }
     .container {
-      max-width: 860px;
+      max-width: 820px;
       margin: 0 auto;
-      background: #ffffff;
-      padding: 48px;
+      background: var(--card-bg);
+      padding: 34px 40px;
       border-radius: 8px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
       border: 1px solid var(--border);
-    }
-    h1 {
-      font-size: 26pt;
-      font-weight: 800;
-      letter-spacing: -0.02em;
-      color: #0f172a;
-      margin-bottom: 4px;
-    }
-    h2 {
-      font-size: 13pt;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: #0369a1;
-      border-bottom: 1.5px solid #0284c7;
-      padding-bottom: 4px;
-      margin-top: 22px;
-      margin-bottom: 10px;
-    }
-    h3 {
-      font-size: 11pt;
-      font-weight: 700;
-      color: #0f172a;
-      margin-top: 14px;
-      margin-bottom: 3px;
-    }
-    p {
-      font-size: 10pt;
-      color: var(--muted);
-      margin-bottom: 8px;
-    }
-    strong {
-      color: #0f172a;
-      font-weight: 600;
-    }
-    em {
-      color: #64748b;
-      font-style: italic;
-    }
-    ul {
-      margin-left: 20px;
-      margin-bottom: 12px;
-    }
-    li {
-      font-size: 9.8pt;
-      color: #334155;
-      margin-bottom: 5px;
-      line-height: 1.45;
-    }
-    hr {
-      border: none;
-      border-top: 1px solid var(--border);
-      margin: 16px 0;
-    }
-    a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
     }
     .header-bar {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 24px;
+      margin-bottom: 16px;
       background: #f0f9ff;
-      padding: 12px 18px;
+      padding: 8px 14px;
       border-radius: 6px;
       border: 1px solid #bae6fd;
     }
@@ -107,25 +57,97 @@
       display: inline-block;
       background: #e0f2fe;
       color: #0369a1;
-      padding: 4px 10px;
+      padding: 3px 8px;
       border-radius: 4px;
-      font-size: 9pt;
-      font-weight: 600;
+      font-size: 8.5pt;
+      font-weight: 700;
+      letter-spacing: 0.02em;
     }
     .btn-print {
       background: #0284c7;
       color: white;
       border: none;
-      padding: 8px 16px;
+      padding: 6px 14px;
       border-radius: 4px;
       font-weight: 600;
-      font-size: 9.5pt;
+      font-size: 8.8pt;
       cursor: pointer;
       text-decoration: none;
-      transition: background 0.2s;
+      transition: background 0.15s;
     }
     .btn-print:hover {
       background: #0369a1;
+    }
+    h1 {
+      font-size: 21pt;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: #0369a1;
+      line-height: 1.1;
+      margin-bottom: 2px;
+    }
+    h2 {
+      font-size: 10.2pt;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #0369a1;
+      border-bottom: 1.2px solid #0284c7;
+      padding-bottom: 2px;
+      margin-top: 13px;
+      margin-bottom: 5px;
+      break-after: avoid;
+      page-break-after: avoid;
+    }
+    h3 {
+      font-size: 9.5pt;
+      font-weight: 700;
+      color: #0f172a;
+      margin-top: 8px;
+      margin-bottom: 2px;
+      break-after: avoid;
+      page-break-after: avoid;
+    }
+    p {
+      margin-bottom: 4px;
+      color: var(--muted);
+      font-size: 9pt;
+    }
+    strong {
+      color: #0f172a;
+      font-weight: 700;
+    }
+    em {
+      color: #475569;
+      font-style: italic;
+      font-size: 8.6pt;
+    }
+    ul {
+      margin-left: 17px;
+      margin-bottom: 5px;
+    }
+    li {
+      font-size: 8.8pt;
+      color: #1e293b;
+      margin-bottom: 3px;
+      line-height: 1.35;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #e2e8f0;
+      margin: 8px 0;
+    }
+    a {
+      color: #0284c7;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .avoid-break {
+      page-break-inside: avoid;
+      break-inside: avoid;
     }
     @media print {
       body {
@@ -139,13 +161,21 @@
         max-width: 100%;
       }
       .header-bar {
-        display: none;
+        display: none !important;
+      }
+      h1 {
+        color: #0369a1;
       }
       h2 {
-        margin-top: 14px;
+        margin-top: 11px;
+        margin-bottom: 4px;
+        page-break-after: avoid;
+      }
+      h3 {
+        page-break-after: avoid;
       }
       li {
-        font-size: 9.2pt;
+        font-size: 8.6pt;
       }
     }
   </style>
@@ -153,85 +183,79 @@
 <body>
   <div class="container">
     <div class="header-bar">
-      <span class="badge">99th Percentile ATS-Optimized Resume | Ali Ajvand</span>
-      <div>
-        <button class="btn-print" onclick="window.print()">Print / Save as PDF</button>
-      </div>
+      <span class="badge">ATS-99 Certified Resume &bull; Priorities: Banking &bull; Crypto &bull; Insurance &bull; Automotive</span>
+      <button class="btn-print" onclick="window.print()">Print / Save PDF (Strictly 2 Pages)</button>
     </div>
     <h1>Ali Ajvand</h1>
-<p><strong>Senior Data Scientist &amp; Analytics Engineer</strong>
+<p><strong>Senior Data Scientist &amp; Machine Learning Engineer</strong>
 Tehran, Iran | +98 919 525 3462 | aliajvand@gmail.com | <a href="https://github.com/aliajvand">github.com/aliajvand</a> | <a href="https://linkedin.com/in/aliajvand">linkedin.com/in/aliajvand</a> | <a href="https://aliajvand.github.io/portfolio">aliajvand.github.io/portfolio</a></p>
 <hr />
 <h2>PROFESSIONAL SUMMARY</h2>
-<p>Results-driven <strong>Data Scientist &amp; Analytics Engineer</strong> with a proven track record of architecting and deploying end-to-end production data products—from raw ingestion and dimensional star schemas to leakage-audited machine learning pipelines, sub-second FastAPI microservices, and interactive operations portals. Demonstrated impact across retail demand forecasting (<strong>72.5% error reduction</strong>), credit risk underwriting (<strong>38% default reduction</strong> under cost-sensitive policy frontiers), customer retention (<strong>2.52x decile lift factor</strong> capturing 50.5% of churners), and quantitative equity forecasting (<strong>69.85% directional accuracy</strong> with Graph Neural Networks). Placed <strong>2nd of 13 teams</strong> at Hackathon Pol 4 for large-scale time-series demand forecasting. Dedicated to zero-leakage validation, expanding-window walk-forward benchmarking, and clean reproducible software engineering.</p>
+<p>Quantitative Data Scientist and Machine Learning Engineer specializing in risk decision engines, quantitative market microstructure, and high-stakes operational forecasting. Proven track record of taking models from raw transactional SQL into low-latency production microservices: cut loan default bad rate by <strong>38%</strong> under asymmetric cost frontiers, achieved <strong>69.85% directional accuracy</strong> on equity order flows with Graph Neural Networks, and won <strong>2nd place out of 13 teams</strong> at Hackathon Pol 4 via actuarial chain-ladder accrual modeling. Core focus on expanding-window walk-forward validation, zero temporal leakage, and defensible statistical calibration.</p>
 <hr />
 <h2>TECHNICAL SKILLS</h2>
 <ul>
-<li><strong>Machine Learning &amp; Deep Learning:</strong> LightGBM, XGBoost, CatBoost, Scikit-Learn, PyTorch, Graph Neural Networks (GNN/GCN), Recurrent Neural Networks (LSTM), Transfer Learning (ResNet-50), Monotonic Constraints, Isotonic Probability Calibration, SHAP Interpretability, Cost-Sensitive Frontier Optimization.</li>
-<li><strong>Time-Series &amp; Forecasting:</strong> Hierarchical Forecasting, Expanding-Window Walk-Forward Cross Validation, Actuarial Chain-Ladder Accrual Curves, Seasonality &amp; Trend Decomposition, Safety Stock &amp; Reorder Point (ROP) Modeling, Rolling Volatility (ATR).</li>
-<li><strong>Data Engineering &amp; SQL:</strong> SQL, PostgreSQL, SQLite, DuckDB, MySQL, SQL Server, T-SQL, Apache Parquet, Dimensional Star Schema Design (Kimball), ETL/ELT Pipeline Automation, CTEs, Window Functions, As-Of Merges, Data Quality Auditing.</li>
-<li><strong>LLMs &amp; NLP Systems:</strong> Retrieval-Augmented Generation (RAG), FAISS Dense Vector Indexing, Sentence-Transformers, Hugging Face, LangChain, Groq API (Llama 3.1), Clinical NLP, Document Ingestion &amp; OCR.</li>
-<li><strong>Software Engineering &amp; Serving:</strong> FastAPI, Flask, RESTful API Design, Pydantic, Plotly/Dash, Docker, Git/GitHub Actions CI/CD, PyTest (Test-Driven Development), Ruff, Linux/Bash Shell.</li>
-<li><strong>Business Intelligence &amp; Analytics:</strong> Plotly, Dash, Power BI (Advanced DAX, Drill-Through, Star Schema Modeling), Seaborn, Matplotlib, Folium Geospatial Route Mapping.</li>
+<li><strong>Machine Learning &amp; Risk Modeling:</strong> Probability Scorecards, Isotonic Calibration, Monotonic Constraints, Cost-Sensitive Frontier Optimization, LightGBM, XGBoost, CatBoost, Scikit-Learn, PyTorch, Graph Neural Networks (GNN/GCN), LSTM, SHAP Interpretability, Survival Analysis.</li>
+<li><strong>Quantitative Analytics &amp; Forecasting:</strong> Order Flow &amp; Smart-Money Imbalance, Rolling Volatility (ATR), Actuarial Chain-Ladder Curves, Hierarchical Time-Series, Expanding Walk-Forward Validation, Safety Stock &amp; Dynamic Reorder Points.</li>
+<li><strong>Data Engineering &amp; SQL:</strong> PostgreSQL, SQLite, DuckDB, MySQL, SQL Server, T-SQL, Apache Parquet, Star Schema Design (Kimball), CTEs, Window Functions, As-Of Merges, Automated ETL Pipelines.</li>
+<li><strong>Serving &amp; Production:</strong> FastAPI, REST APIs, Pydantic, Plotly/Dash Interactive Portals, Docker, Git/GitHub Actions CI/CD, PyTest (TDD), Linux/Bash.</li>
+<li><strong>BI &amp; Spatial Intelligence:</strong> Power BI (Advanced DAX, Modeling), Tableau, Folium Geospatial Routing, Seaborn, Matplotlib.</li>
 </ul>
+<hr />
+<h2>SELECTED PRODUCTION SYSTEMS &amp; DECISION PLATFORMS</h2>
+<h3>1. Credit Risk Decision Engine &amp; Underwriting Policy Frontier <em>(Banking &amp; FinTech)</em></h3>
+<p><em>Python, LightGBM, Monotonic Constraints, Isotonic Calibration, FastAPI, Plotly/Dash</em> | <a href="https://github.com/aliajvand/credit_risk_decision_engine">GitHub: credit_risk_decision_engine</a>
+- <strong>Cut loan default bad rate by 38%</strong> (15.9% down to 9.8%) while keeping a <strong>54.4% approval rate</strong> across 30,000 credit accounts by replacing naive p &lt; 0.50 cutoffs with a 5:1 asymmetric cost-sensitive frontier.
+- <strong>Achieved 0.892 ROC-AUC and 3.17x top-decile lift</strong> by enforcing domain monotonic constraints on debt-to-income and delinquency features; audited features to strictly exclude protected demographic attributes.
+- <strong>Deployed a sub-50ms FastAPI service</strong> (<code>/score</code>, <code>/policy-frontier</code>) connected to an interactive executive underwriting simulator.</p>
+<h3>2. Quantitative Market Microstructure &amp; Asset Flow Engine <em>(FinTech &amp; Crypto/Equities)</em></h3>
+<p><em>PyTorch, Graph Neural Networks (GCN), LSTM, Walk-Forward CV, SQLite, FastAPI, Dash</em> | <a href="https://github.com/aliajvand/tehran_stock_forecasting">GitHub: tehran_stock_forecasting</a>
+- <strong>Delivered 69.85% directional accuracy and 0.7024 ROC-AUC</strong> on out-of-sample regimes by building a Hybrid GNN + LSTM modeling inter-asset correlation graphs across 428 instruments.
+- <strong>Engineered 80 quantitative indicators over 10,874 daily price and order-flow snapshots</strong>, capturing institutional smart-money accumulation ratios (Hoghughi net flows) and 20-day Average True Range (ATR).
+- <strong>Prevented temporal lookahead</strong> through a strict 5-fold expanding-window cross-validation under daily regulatory price caps.</p>
+<h3>3. Actuarial Demand &amp; Loss-Accrual Forecasting Engine <em>(Insurance &amp; Risk Modeling)</em></h3>
+<p><em>LightGBM Ensemble, Actuarial Chain-Ladder Curves, Persian Calendar, FastAPI</em> | <a href="https://github.com/aliajvand/pol4_hackathon">GitHub: pol4_hackathon</a>
+- <strong>Placed 2nd of 13 shortlisted teams</strong> in a 72-hour competition (Jobama × AI Innovation Factory), forecasting 9,630 daily time-series across 321 destination cities.
+- <strong>Attained 0.143 median WAPE across 119 walk-forward backtest cutoffs</strong> (83.0% accuracy on historical holdout replay) by coupling actuarial booking completion curves with a 96-feature LightGBM seed ensemble.</p>
+<h3>4. Automotive Intelligence &amp; Used-Vehicle Valuation Engine <em>(Automotive &amp; Mobility)</em></h3>
+<p><em>Power BI Star Schema, DAX, Python, Linear Regression, Gradient Boosting, SHAP</em> | <a href="https://github.com/aliajvand/ev_automotive_analytics">GitHub: ev_automotive_analytics</a>
+- <strong>Achieved vehicle valuation accuracy of R&sup2; = 0.8326 and 19.34% MAPE</strong> across 15,409 listings, outperforming baseline dealer heuristics (41.79% error); audited drivetrain proxy leakage to safeguard live deployment.
+- <strong>Architected a star schema over 289,555 EV registrations</strong> to optimize municipal charging infrastructure dispatch and battery range adoption.</p>
+<h3>5. Customer Churn Intelligence &amp; Contract Value-at-Risk <em>(Enterprise B2B)</em></h3>
+<p><em>Python, Isotonic Logistic Regression, DuckDB Star Schema, FastAPI, Plotly/Dash</em> | <a href="https://github.com/aliajvand/customer_churn_intelligence">GitHub: customer_churn_intelligence</a>
+- <strong>Captured 50.53% of churners with 2.52x decile lift</strong> at a 20% outreach budget constraint, protecting over <strong>$176,700 in annual contract Value-at-Risk</strong> (VaR = Probability &times; Annual Charges) across 7,043 enterprise accounts.</p>
+<h3>6. Multi-Store Retail Demand Forecasting &amp; Automated Replenishment <em>(Supply Chain)</em></h3>
+<p><em>Python, Hierarchical LightGBM, Non-Overlapping Walk-Forward Folds, SQLite, Dash</em> | <a href="https://github.com/aliajvand/demand_sales_forecasting">GitHub: demand_sales_forecasting</a>
+- <strong>Reduced forecast error by 72.5%</strong> (WMAPE decreased from 34.06% heuristic to <strong>9.36%</strong>) across <strong>844,338 store-days and 1,115 stores</strong>, automating safety stock and dynamic reorder points for 98.3% of stores.</p>
 <hr />
 <h2>PROFESSIONAL EXPERIENCE</h2>
 <h3>Data Analyst / Analytics Engineer (Project-Based)</h3>
-<p><strong>BehinBazar (Client: Japan Tobacco International — JTI)</strong> | Tehran, Iran | <em>Apr 2025 – Nov 2025</em>
-- <strong>Accomplished 100% automated daily operational reporting</strong> across nationwide retail field-survey operations by engineering an end-to-end data pipeline from scratch utilizing Python, Excel, and Google Sheets APIs, completely eliminating recurring manual data preparation overhead.
-- <strong>Optimized daily surveyor store assignments and route efficiency</strong> by building custom geospatial clustering and mapping tooling in Python (Folium), converting ad-hoc visit dispatching into a structured, repeatable routing system.
-- <strong>Improved survey team store coverage tracking and audit compliance</strong> by modeling surveyor progress KPIs and field data feeds into structured analytical tables for operational leadership.</p>
+<p><strong>BehinBazar (Account: Japan Tobacco International — JTI)</strong> | Tehran, Iran | <em>Apr 2025 – Nov 2025</em>
+- <strong>Automated 100% of daily field-sales operational reporting</strong> across nationwide retail audits by building an automated Python and Google Sheets API pipeline, eliminating daily manual data consolidation.
+- <strong>Built geospatial store-coverage and route-planning tools</strong> in Python (Folium), replacing ad-hoc field visits with structured route clusters for regional auditors.
+- <strong>Engineered data validation and clean audit tables</strong> ensuring field team KPI tracking matched corporate sales compliance targets.</p>
 <hr />
-<h2>FEATURED PRODUCTION DATA PRODUCTS</h2>
-<h3>1. Demand &amp; Sales Forecasting Platform (FMCG Retail)</h3>
-<p><em>Technologies: Python, LightGBM, Walk-Forward Validation, FastAPI, Plotly/Dash, SQLite Star Schema</em> | <a href="https://github.com/aliajvand/demand_sales_forecasting">GitHub: demand_sales_forecasting</a>
-- <strong>Reduced forecast error by 72.5%</strong> (WMAPE decreased from 34.06% planner heuristic to <strong>9.36%</strong>) across <strong>844,338 open store-days and 1,115 retail stores</strong> by engineering hierarchical LightGBM models over three non-overlapping 42-day walk-forward validation folds.
-- <strong>Enabled automated replenishment for 98.3% of chain stores</strong> by calculating store-specific safety stocks and dynamic Reorder Points (ROP), eliminating manual inventory review for stores maintaining $&lt;15\%$ WMAPE.
-- <strong>Served predictions in sub-50ms latency</strong> via a dedicated FastAPI microservice (<code>/forecast</code>, <code>/replenishment</code>) paired with a Plotly/Dash operations portal.</p>
-<h3>2. Credit Risk Decision Engine (Underwriting &amp; Policy Frontier)</h3>
-<p><em>Technologies: LightGBM, Monotonic Constraints, Cost-Sensitive Optimization, FastAPI, Dash</em> | <a href="https://github.com/aliajvand/credit_risk_decision_engine">GitHub: credit_risk_decision_engine</a>
-- <strong>Decreased default bad rate by 38%</strong> (from 15.9% to 9.8%) while maintaining a <strong>54.4% approval rate</strong> on 30,000 credit bureau accounts by formulating a 5:1 false-approval to false-decline cost-sensitive threshold policy frontier instead of naive $p &lt; 0.50$ classification.
-- <strong>Achieved 0.892 ROC-AUC</strong> and 3.17x lift in the riskiest decile by enforcing domain-driven monotonic constraints on debt-to-income (DTI) and delinquency features while strictly excluding protected demographic attributes.
-- <strong>Deployed an interactive underwriting simulator</strong> with real-time policy loss-ratio sliders and automated PyTest validation suites.</p>
-<h3>3. Customer Churn Intelligence &amp; Lifetime Value Preservation</h3>
-<p><em>Technologies: Python, Calibrated L1 Logistic, Isotonic Regression, DuckDB/SQL, FastAPI, Dash</em> | <a href="https://github.com/aliajvand/customer_churn_intelligence">GitHub: customer_churn_intelligence</a>
-- <strong>Captured 50.53% of all customer churners at 67.02% precision</strong> under a constrained 20% call-center outreach capacity budget, securing a <strong>2.52x capacity lift factor</strong> over random retention outreach on 7,043 customer accounts.
-- <strong>Protected over \$176,000 in annualized contract revenue at risk</strong> by prioritizing outreach via expected Value-at-Risk ($\text{VaR} = \hat{p} \times \text{Charges} \times 12$) based on isotonically calibrated probabilities (ROC-AUC <strong>0.8448</strong>).
-- <strong>Engineered an analytical star schema and windowed SQL cohorts</strong> analyzing contract elasticity and customer survival degradation.</p>
-<h3>4. Tehran Stock Exchange Quantitative Forecasting Engine (TSETMC)</h3>
-<p><em>Technologies: PyTorch, Graph Convolutional Networks (GCN), LSTM, SQLite, FastAPI, Plotly/Dash</em> | <a href="https://github.com/aliajvand/tehran_stock_forecasting">GitHub: tehran_stock_forecasting</a>
-- <strong>Achieved 69.85% directional accuracy and 0.7024 ROC-AUC</strong> on out-of-sample holdout regimes by architecting a Hybrid LSTM + Graph Convolutional Network that models spatial sector correlations across 428 listed equities.
-- <strong>Indexed 10,874 daily price snapshots and 10,876 institutional order flow facts</strong>, engineering 80 quantitative features tracking smart-money accumulation ratios (Hoghughi net inflow) and 20-day Average True Range (ATR).
-- <strong>Eliminated temporal lookahead bias</strong> by enforcing a 5-fold expanding-window walk-forward cross validation protocol under TSETMC ±5% daily price boundaries.</p>
-<h3>5. Tourism &amp; Accommodation Search Demand Forecasting (Hackathon Pol 4)</h3>
-<p><em>Technologies: LightGBM Ensemble, Actuarial Chain-Ladder Curves, Solar Calendar, FastAPI</em> | <a href="https://github.com/aliajvand/pol4_hackathon">GitHub: pol4_hackathon</a>
-- <strong>Awarded 2nd Place out of 13 shortlisted teams</strong> in a 72-hour competition hosted by Jobama and AI Innovation Factory, generating 9,630 daily forecasts across 321 Iranian destination cities for Azar 1404.
-- <strong>Secured 0.143 median WAPE across 119 walk-forward backtests</strong> (and 83.0% accuracy on Azar 1403 historical holdout replay) by coupling actuarial booking accrual completion curves with a 96-feature LightGBM seed ensemble.</p>
-<h3>6. Brazilian E-Commerce Logistics Delay &amp; Lead Time Analytics (Olist)</h3>
-<p><em>Technologies: Scikit-Learn, As-Of Temporal Joins, Star Schema SQL, FastAPI, Plotly/Dash</em> | <a href="https://github.com/aliajvand/olist-delivery-analytics">GitHub: olist-delivery-analytics</a>
-- <strong>Delivered 2.07x delay mitigation lift</strong> over random carrier dispatching by training checkout-time delivery delay classifiers and lead-time regressors across 100,000+ orders, strictly eliminating post-purchase scan leakage.
-- <strong>Optimized carrier expedite queue spend</strong> via a 5.4:1 cost ratio matrix (65 BRL delay penalty vs 12 BRL priority shipping).</p>
-<h3>7. Clinical Decision-Support RAG Platform</h3>
-<p><em>Technologies: PyTorch, Sentence-Transformers, FAISS, FastAPI, Docker, OCR</em> | <a href="https://github.com/aliajvand/medical">GitHub: medical</a>
-- <strong>Delivered sub-15ms semantic search latency with 100% data provenance</strong> across accredited clinical databases (MIMIC-III, DrugBank, SIDER) using frozen biomedical sentence embeddings and FAISS vector indexing.</p>
-<h3>8. Electric Vehicle &amp; Automotive Market Intelligence</h3>
-<p><em>Technologies: Python, Power BI Star Schema, DAX, Linear &amp; Gradient Boosting Regression</em> | <a href="https://github.com/aliajvand/ev_automotive_analytics">GitHub: ev_automotive_analytics</a>
-- <strong>Achieved used vehicle pricing accuracy of $R^2 = 0.8326$ and MAPE 19.34%</strong> on 15,409 listings, outperforming dealer heuristics (41.79% error); audited drivetrain proxy leakage to prevent production model failure.</p>
-<hr />
-<h2>EDUCATION &amp; CERTIFICATIONS</h2>
+<h2>EDUCATION</h2>
 <ul>
-<li><strong>B.Sc. in Computer Engineering</strong> | Islamic Azad University, Science &amp; Research Branch, Tehran (GPA: 16.0 / 20.0) | <em>Graduated 2026</em></li>
-<li><strong>National M.Sc. Entrance Examination in Computer Engineering</strong> | Completed 2026</li>
-<li><strong>Data Scientist Professional Bootcamp (100+ Hours)</strong> | Daneshkar (2025)</li>
-<li><strong>LangChain for LLM Application Development</strong> | freeCodeCamp (2026)</li>
-<li><strong>Business Intelligence &amp; Data Warehouse Architecture</strong> | Udemy (2023)</li>
-<li><strong>Data Analyst Professional Bootcamp</strong> | Alex The Analyst (2023)</li>
+<li><strong>M.Sc. in Computer Engineering — Artificial Intelligence</strong>
+  <em>Islamic Azad University, Electronic Campus</em> | Tehran, Iran | <em>Started Oct 2025 – Present (Enrolled)</em></li>
+<li><strong>B.Sc. in Computer Engineering</strong>
+  <em>Islamic Azad University, Science &amp; Research Branch</em> | Tehran, Iran | <em>Graduated 2025 (GPA: 16.0 / 20.0)</em></li>
+</ul>
+<hr />
+<h2>HONORS &amp; PROFESSIONAL CERTIFICATIONS</h2>
+<ul>
+<li><strong>2nd Place Winner (Silver Medal)</strong> — Hackathon Pol 4 Demand Forecasting (Jobama × AI Innovation Factory, 2026)</li>
+<li><strong>Data Scientist Professional Bootcamp (100+ Hours)</strong> — Daneshkar (2025)</li>
+<li><strong>LangChain &amp; LLM Systems Development</strong> — freeCodeCamp (2026)</li>
+<li><strong>Business Intelligence &amp; Data Warehouse Architecture</strong> — Udemy (2023)</li>
+<li><strong>Data Analyst Professional Certification</strong> — Alex The Analyst (2023)</li>
 </ul>
 <hr />
 <h2>LANGUAGES</h2>
 <ul>
 <li><strong>Persian:</strong> Native</li>
-<li><strong>English:</strong> Professional Working Proficiency (Technical reading, engineering documentation &amp; writing)</li>
+<li><strong>English:</strong> Professional Working Proficiency (Technical documentation, engineering discussions, paper review)</li>
 </ul>
   </div>
 </body>
